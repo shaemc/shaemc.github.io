@@ -1,18 +1,20 @@
 #body {
     max-width: 800px;
     margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
 }
 h1 {
     background-color: #FCFF5B;
     text-align:center;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 8px;
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 footer {
     background-color: #FFAAA1;
     text-align:center;
-    border-radius: 5px;
+    border-radius: 15px;
     color: white;
 }
 h2 {
