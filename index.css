@@ -11,12 +11,13 @@ h1 {
 }
 footer {
     background-color: #FFAAA1;
-    text-align: center;
-    margin: 0 auto;
+    text-align:center;
+    border-radius: 5px;
+    color: white;
 }
 h2 {
     text-decoration: underline;
 }
-main a :hover {
+a :hover {
     background-color: #FCFF5B;
 }
