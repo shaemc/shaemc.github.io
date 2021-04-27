@@ -12,7 +12,7 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
 }
 footer {
-    background-color: #FFAAA1;
+    background-color: red;
     text-align:center;
     border-radius: 15px;
     color: white;
@@ -23,3 +23,4 @@ h2 {
 a :hover {
     background-color: #FCFF5B;
 }
+
