@@ -1,0 +1,15 @@
+body {
+    max-width: 500px;
+}
+h1 {
+    background-color: #FCFF5B;
+    text-align:center;
+    border-radius: 5px;
+}
+footer {
+    background-color: #FFAAA1;
+    text-align: center;
+}
+h2 {
+    text-decoration: underline;
+}
