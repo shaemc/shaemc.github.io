@@ -1,15 +1,15 @@
-#body {
+body {
     max-width: 800px;
     margin: 0 auto;
     font-family: Arial, Helvetica, sans-serif;
 }
-h1 {
+header {
     background-color: #a34035;
-    text-align:center;
     border-radius: 15px;
     padding: 8px;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
 }
 footer {
     background-color: #a34035;
@@ -17,14 +17,40 @@ footer {
     border-radius: 15px;
     color: white;
     padding: 4px;
+    font-family: Arial, Helvetica, sans-serif;
 }
-h2 {
-    text-decoration: underline;
+footer a, footer a:link, footer a:visited, footer a:hover, footer a:active, footer a:focus {
+    color:white;
 }
-a :hover {
-    background-color: #FCFF5B;
-}
-main {
-    margin: 0 auto;
+footer a:hover {
+    color:gray;
 }
 
+.highlighted {
+    color: yellow;
+    font-size:.8em;
+} 
+main {
+    margin: 0 auto;
+    padding 0 15px;
+}
+
+h1{
+    font-size:32px;
+    padding-left: 20px;
+}
+
+h2 {
+    border-bottom: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.picture{
+    float:right;
+    box-shadow: 0 0 15px black;
+    width: 150px;
+}
