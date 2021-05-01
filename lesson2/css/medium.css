@@ -1,0 +1,11 @@
+@media only screen and (min-width:32.5em) {
+    body{
+        background-color: blue;
+    }
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+    img {
+        width: 238pxs;
+    }
+}
