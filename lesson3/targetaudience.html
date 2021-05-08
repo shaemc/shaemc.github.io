@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/lesson3/css/normalize.css">
+    <link rel="stylesheet" href="/lesson3/css/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header >
+        <nav>
+            <ul id='navigation'>
+                <li><a class="ham" href="#">&#9776;</a></li>
+                <li><a href="/lesson3/index.html">Home</a></li>
+                <li><a href="/lesson3/targetaudience.html">Target Audience</a></li>
+                <li><a href="/lesson3/colorscheme.html">Color Scheme</a></li>
+                <li><a href="/lesson3/typography.html">Typography</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>
+            Target Audience
+        </h1>
+        <h2>
+            Description
+        </h2>
+        <p>
+            This website is intended to help people who want to know the weather, to choose their footwear accordingly.
+        </p>
+        <h2>
+            Personas
+        </h2>
+        <h3>
+            Sierra
+        </h3>
+        <p>
+            Sierra just got home from her mission and doesn't know what to wear for Idaho weather! She is used to it 
+            being hot everyday, without a lot of variation. She wants to know the weather so she can dress according
+            to Idaho weather, instead of her mission weather!
+        </p>
+        <h3>
+            Jordan
+        </h3>
+        <p>
+            Jordan is a stay at home mom and has three kids that love to be outside. They love going to the park, zoo
+            and anywhere that they can play on a playground. Jordan wants to know what the weather will be like so she
+            can dress her kids up in the right clothes for the weather!
+        </p>
+        <h2>
+            Scenarios
+        </h2>
+        <li>
+            Someone just moved to Idaho and wants to know what kind of shoes she needs to go purchase for the weather here.
+        </li>
+        <li>
+            Someone is new to the area and wants to know where good parks are for kids.
+        </li>
+        <li>
+            Someone is visiting Idaho for vacation and wants to know what days they can go hiking.
+        </li>
+        <li>
+            Someone wants to visit for the weekend but wants to make sure they bring the right shoes for the weekend.
+        </li>
+        <li>
+            Someone is visiting and wants to know what shoes to wear for the weather to see what will be most comfortable
+            for them.
+        </li>
+    </main>
+    <script>
+        const hambutton = document.querySelector('.ham');
+        const mainnav = document.querySelector('#navigation');
+        hambutton.addEventListener('click', () => {mainnav.classList.toggle('responsive')}, false);
+    </script>
+</body>
+</html>

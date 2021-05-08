@@ -1,0 +1,126 @@
+/* Phone View */
+body {
+    background-color: #637B8C;
+}
+nav {
+    margin: 0 auto;
+    max-width: 360px;
+    background-color: #EEF3E6;
+    font-family: 'Lato', sans-serif;
+    color: #637B8C;
+}
+#navigation {
+    list-style: none;
+    padding: 0;
+    grid-template-columns: auto;
+    display: grid;
+}
+#navigation li:first-child {
+    display: block;
+} 
+#navigation li {
+    display: none;
+}
+#navigation a {
+    display: block;
+    padding: 0.75rem;
+    text-align: left;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+#navigation a:hover, #navigation a.active:hover {
+    color: white;
+    background-color: #608BA9;
+}
+#navigation a.active {
+    background-color: rgba(0,0,0,.55);
+    color: white;
+    /* border-bottom: 5px solid black; */
+}
+#navigation.responsive li {
+    display: block;
+}
+.color {
+    width: 200px;
+}
+main {
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: white;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+p, li {
+    font-family: 'Lato', sans-serif;
+    color: #637B8C;
+    text-align: left;
+    padding-left: 10px;
+}
+h1, h2, h3 {
+    font-family: 'Bebas Neue', cursive;
+    color: #3D3D3D;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* Bigger media */
+@media only screen and (min-width: 34.5em) {
+    nav{
+        max-width: 100%;
+    }
+    #navigation {
+        grid-template-columns: repeat(4, auto);
+    }
+    #navigation li {
+        display: block;
+    }
+    #navigation a {
+        text-align: center;
+    }
+    #navigation li:first-child {
+        display: none;
+    }
+    .color {
+        width:550px;
+    }
+    main {
+        margin: 0 auto;
+        max-width: 800px;
+        background-color: white;
+        text-align: center;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    p {
+        font-family: 'Lato', sans-serif;
+    }
+    h1, h2 {
+        font-family: 'Bebas Neue', cursive;
+    }
+}
+
+@media only screen and (min-width: 54.5em) {
+    #navigation {
+        width: 800px;
+        margin: 16px auto;
+    }
+    main {
+        margin: 0 auto;
+        max-width: 800px;
+        background-color: white;
+        text-align: center;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    p {
+        font-family: 'Lato', sans-serif;
+    }
+    h1, h2 {
+        font-family: 'Bebas Neue', cursive;
+    }
+    .color {
+        width:800px;
+    }
+}
