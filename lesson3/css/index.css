@@ -42,7 +42,7 @@ nav {
     display: block;
 }
 .color {
-    width: 200px;
+    width: 100%;
 }
 main {
     margin: 0 auto;
@@ -83,7 +83,7 @@ h1, h2, h3 {
         display: none;
     }
     .color {
-        width:550px;
+        width:100%;
     }
     main {
         margin: 0 auto;
@@ -121,6 +121,6 @@ h1, h2, h3 {
         font-family: 'Bebas Neue', cursive;
     }
     .color {
-        width:800px;
+        width:100%;
     }
 }
