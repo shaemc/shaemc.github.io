@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/lesson4/css/normalize.css">
+    <link rel="stylesheet" href="/lesson4/css/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>The Weather Site</title>
+</head>
+<body>
+    <header>
+        <img src="/lesson3/images/boots.png" alt="rainboots" width='100px'>
+        <h1>What Shoes to Wear</h1>
+        <h4>Come rain or shine to find the perfect footwear!</h4>
+        <a class="ham" href="#">&#9776;</a>
+    
+    </header>
+    <nav>
+        <ul id='navigation'>
+            <li></li>
+            <li><a href="/lesson4/index.html">Home</a></li>
+            <li><a href="#">Preston</a></li>
+            <li><a href="#">Soda Springs</a></li>
+            <li><a href="#">Fish Haven</a></li>
+            <li><a href="#">Storm Center</a></li>
+            <li><a href="#">Gallery</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id='sum'>
+        <h2>weather summary</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <img src="/lesson4/images/640x360.png" alt="Big placeholder" width=100%>
+        </div>
+        <div id='five'>
+        <h2>Five day forecast</h2>
+        <img src="/lesson4/images/placeholder-300x202.jpg" alt="Baby placeholder" width=17%>
+        <img src="/lesson4/images/placeholder-300x202.jpg" alt="Baby placeholder" width=17%>
+        <img src="/lesson4/images/placeholder-300x202.jpg" alt="Baby placeholder" width=17%>
+        <img src="/lesson4/images/placeholder-300x202.jpg" alt="Baby placeholder" width=17%>
+        <img src="/lesson4/images/placeholder-300x202.jpg" alt="Baby placeholder" width=17%>
+        </div>
+        <div id="article">
+        <h2>Article</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </main>
+    <div>
+        <h2>Contact information</h2>
+        <img src="/lesson4/images/350x150.png" alt="Medium placeholder" width=100%>
+    </div>
+    <footer>    
+        <p class='copyright'>&copy; <span id='copyrightyear'></span> | Shae Carnahan | Idaho | <a href='https://www.byui.edu/online'>BYUI Online Learning</a> 
+        </p>
+        <p class='highlighted'>Date: <span id='lastupdated'></span></p>
+    </footer>
+    <script>
+        const hambutton = document.querySelector('.ham');
+        const mainnav = document.querySelector('#navigation');
+        hambutton.addEventListener('click', () => {mainnav.classList.toggle('responsive')}, false);
+    </script>
+    <script>
+        const lu = document.querySelector('#lastupdated');
+        lu.textContent = document.lastModified;
+
+        const cry = document.querySelector('#copyrightyear');
+        cry.textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
