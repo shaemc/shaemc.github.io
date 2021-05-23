@@ -1,0 +1,22 @@
+body {
+    margin: 0 auto;
+    width: 800px;
+    background-color: #608BA9;
+}
+h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 90px;
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+}
+p {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
