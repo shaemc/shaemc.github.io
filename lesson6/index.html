@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/lesson6/normalize.css">
+    <link rel="stylesheet" href="/lesson6/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script src="/lesson6/index.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Lato&family=Sacramento&display=swap" rel="stylesheet">
+    <title>The Weather Site</title>
+</head>
+<body>
+    <header>
+        <img src="/lesson3/images/boots.png" alt="rainboots" width='100px'>
+        <h1>What Shoes to Wear</h1>
+        <h4>Come rain or shine to find the perfect footwear!</h4>
+        <a class="ham" href="#">&#9776;</a>
+    </header>
+    <div class='banner'>
+        Saturday: Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion
+    </div>
+    <nav>
+        <ul id='navigation'>
+            <li></li>
+            <li><a href="/lesson6/index.html">Home</a></li>
+            <li><a class='active' href="#">Preston</a></li>
+            <li><a href="#">Soda Springs</a></li>
+            <li><a href="#">Fish Haven</a></li>
+            <li><a href="#">Storm Center</a></li>
+            <li><a href="#">Gallery</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id='sum'>
+        <p>
+            <strong>Weather Summary</strong>  <br>
+            Currently: 
+        </p>
+        <p id='temperature'>
+            65
+        </p>
+        <p>
+            &deg; F <br>
+            High: 77&deg; F <br>
+            Low: 45&deg; F <br>
+            Precipitation: 12% <br>
+            Humidity: 10% <br>
+            Wind: 
+        </p>
+        <p id='windspeed' class='overlay'>13</p>
+        <p>mph</p>
+        <img id='sumimg' src='/lesson6/images/large.jpg' alt="Big placeholder" width=100%>
+        </div>
+        <div id='five'>
+        <h2>Five day forecast</h2>
+        <img id='fiveday' src="/lesson5/images/weather forecast.png" alt="five day forecast">
+        </div>
+        <div id="article">
+        <h2>
+            12 Best Hiking Trails in Idaho
+        </h2>
+        <p>
+            Written by: Brad Lane
+        </p>
+        <p>
+            Idaho has more amazing hiking trails than days in the year. Narrowing down the best hiking trails in 
+            the state is like choosing a favorite step along the path. But some hikes do stand above others. A few 
+            elevated hikes include massive mountain backdrops along the entire route. Other trails traverse ambling 
+            ivers with postcard-worthy scenery much of the way.
+        </p>
+        <p>
+            Some signature landscapes in Idaho include the Sawtooth Mountains, the Snake River Plain, and the 
+            beautiful lakes in the northern Panhandle. Hiking trails are the best way to explore these stunning 
+            environments, and footpaths are aplenty. Other outstanding features of Idaho include giant dunes, 
+            pioneer cabins, and steaming hot springs.
+        </p>
+        <p>
+            Continue reading: <a href='https://www.planetware.com/idaho/best-hiking-trails-in-idaho-us-id-29.htm'>https://www.planetware.com/idaho/best-hiking-trails-in-idaho-us-id-29.htm </a>
+        </p>
+        </div>
+    </main>
+    <div class='foot'>
+        <h2>Contact information</h2>
+        <p>
+            123 S Main St <br>
+            555-555-5555 <br>
+            shae.carnahan@gmail.com
+        </p>
+        <div class='media'>
+        <img id="pin" src="/lesson5/images/pinterest.png" alt="pinterest" width="50px">
+        <img id='insta' src="/lesson5/images/instagram.jpg" alt="instagram" width="50px">
+        <img id='facebook' src="/lesson5/images/facebook.png" alt="facebook" width="50px">
+        </div>
+        <img id='map' src="/lesson5/images/rexburg map.jpg" alt="Medium placeholder">
+    </div>
+    <footer>    
+        <p class='copyright'>&copy; <span id='copyrightyear'></span> | Shae Carnahan | Idaho | <a href='https://www.byui.edu/online'>BYUI Online Learning</a> 
+        </p>
+        <p class='date'>Date: <span id='lastupdated'></span></p>
+    </footer>
+    <script>
+        const lu = document.querySelector('#lastupdated');
+        lu.textContent = document.lastModified;
+
+        const cry = document.querySelector('#copyrightyear');
+        cry.textContent = new Date().getFullYear();
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js">{
+        google: { https://fonts.googleapis.com/css2?family=Lato&display=swap
+          families: [
+             'Lato'
+          ]
+        }
+      }
+    </script>
+    <script>
+        {
+            // var tempF = temperature;
+            // var speed = windspeed;
+            var windChillFactor = 35.74 + (0.6215 * tempF) - (35.75 * (speed ** 0.16)) + (0.4275 * tempF * (speed ** 0.16));
+            return windChillFactor;
+        }
+        {
+            var temperature = parseFloat(document.getElementById('temperature').value);
+            var windspeed = parseFloat(document.getElementById('windspeed').value);
+            var result = parseFloat(windChill(temperature, windspeed));
+        //output    
+            document.getElementById('outputDiv').innerHTML = result.toFixed(2) + ' is the wind chill factor.';
+        }
+    </script>
+</body>
+</html>
