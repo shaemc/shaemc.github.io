@@ -98,23 +98,18 @@ header h1 {
     grid-column: 2/3;
     grid-row: 1/3;
 }
-#sum {
-    background-color: #608BA9;
-    margin: 10px;
-    padding: 2px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-#sum p {
+
+.heroimage p {
     grid-column: 1/2;
     padding: 10px;
     width: 150px;
     right: 50px;
 }
 .overlay {
-    grid-column: 2;
-    grid-row: 2;
-    z-index: 12;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    z-index: 22;
     background-color: white;
 }
 #sumimg{
@@ -188,6 +183,17 @@ header h1 {
     height: 150px;
     object-fit: cover;
     object-position: bottom;
+}
+
+.heroimage {
+    max-width: 800px;
+    background-color: #608BA9;
+    margin: 10px;
+    padding: 2px;
+    position: relative;
+}
+#weathersum {
+    display: block;
 }
 
 

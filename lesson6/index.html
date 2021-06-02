@@ -10,8 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <script src="/lesson6/index.js"></script>
+    <script src='/lesson6/windchill.js'></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Lato&family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Lato&family=Sacramento&display=swap" rel="stylesheet">
     <title>The Weather Site</title>
 </head>
 <body>
@@ -36,26 +37,32 @@
         </ul>
     </nav>
     <main>
-        <div id='sum'>
+        <head>
+        <section class='heroimage'>
+        <div class='overlay'>
+        <h2>Weather Summary</h2>
+        <p>Currently:<span id='temp'>65</span>&deg; F</p>
         <p>
-            <strong>Weather Summary</strong>  <br>
-            Currently: 
-        </p>
-        <p id='temperature'>
-            65
-        </p>
-        <p>
-            &deg; F <br>
             High: 77&deg; F <br>
             Low: 45&deg; F <br>
             Precipitation: 12% <br>
             Humidity: 10% <br>
-            Wind: 
+            Wind: <span id='windspeed' >13</span>mph
         </p>
-        <p id='windspeed' class='overlay'>13</p>
-        <p>mph</p>
-        <img id='sumimg' src='/lesson6/images/large.jpg' alt="Big placeholder" width=100%>
+        <p>
+            Windchill:<span id='windchill'></span>
+        </p>
         </div>
+        <picture>
+            <source media="(max-width: 425px)" srcset="/lesson6/images/small.jpg" width=100%>
+            <source media="(max-width: 768px)" srcset="/lesson6/images/medium.jpg" width=100%>
+            <source media="(max-width: 1024px)" srcset='/lesson6/images/large.jpg' width=100%>
+            <img src="/lesson6/images/large.jpg" alt="banner" width=100%>
+        </picture>
+        
+        </section></head>
+        <body>
+        
         <div id='five'>
         <h2>Five day forecast</h2>
         <img id='fiveday' src="/lesson5/images/weather forecast.png" alt="five day forecast">
@@ -82,7 +89,8 @@
         <p>
             Continue reading: <a href='https://www.planetware.com/idaho/best-hiking-trails-in-idaho-us-id-29.htm'>https://www.planetware.com/idaho/best-hiking-trails-in-idaho-us-id-29.htm </a>
         </p>
-        </div>
+        </div>    
+        </body>
     </main>
     <div class='foot'>
         <h2>Contact information</h2>
@@ -117,21 +125,6 @@
           ]
         }
       }
-    </script>
-    <script>
-        {
-            // var tempF = temperature;
-            // var speed = windspeed;
-            var windChillFactor = 35.74 + (0.6215 * tempF) - (35.75 * (speed ** 0.16)) + (0.4275 * tempF * (speed ** 0.16));
-            return windChillFactor;
-        }
-        {
-            var temperature = parseFloat(document.getElementById('temperature').value);
-            var windspeed = parseFloat(document.getElementById('windspeed').value);
-            var result = parseFloat(windChill(temperature, windspeed));
-        //output    
-            document.getElementById('outputDiv').innerHTML = result.toFixed(2) + ' is the wind chill factor.';
-        }
     </script>
 </body>
 </html>

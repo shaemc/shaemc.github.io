@@ -50,12 +50,4 @@ window.addEventListener("load", () => {
       },
       false
     );
-
-    // function findwindchill(speed, temp){
-    //     let temperature = parseFloat(document.getElementById('temperature').value);
-    //     let windchillfactor = 35.74 + (0.6215 * temp) - (35.75 * (speed ** 0.16)) + (0.4275 * temp * (speed ** 0.16));
-    //     console.log(windchillfactor);
-
-    //     temperature.innerHTML = windchillfactor;
-    // }
   });
