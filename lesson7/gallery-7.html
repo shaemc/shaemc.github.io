@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gallery.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img id='rainboots' src="/lesson3/images/boots.png" alt="rainboots">
+        <h1>What Shoes to Wear</h1>
+        <h4>Come rain or shine to find the perfect footwear!</h4>
+        <a class="ham" href="#">&#9776;</a>
+    </header>
+    <nav>
+        <ul id='navigation'>
+            <li></li>
+            <li><a href="/lesson6/index.html">Home</a></li>
+            <li><a href="#">Preston</a></li>
+            <li><a href="#">Soda Springs</a></li>
+            <li><a href="#">Fish Haven</a></li>
+            <li><a href="#">Storm Center</a></li>
+            <li><a class='active' href="gallery-7.html">Gallery</a></li>
+        </ul>
+    </nav>
+    <section>
+    <div class="placeholder-loading" class="one"><img src="images/cloudy.jpg" alt="" class="loading" loading="lazy">
+        <h3 class="one">Slightly cloudy</h3>
+    </div>
+    
+    <div class="placeholder-loading" id="two"><img src="images/rain.jpg" alt="" class="loading" loading="lazy">
+        <h3>Light rain</h3>
+    </div>
+    
+    <div class="placeholder-loading" id="three"><img src="images/rainbow.jpg" alt="" class="loading" loading="lazy">
+        <h3>Rainbows in the forecast</h3>
+    </div>
+    
+    <div class="placeholder-loading" id="four"><img src="images/spring.jpg" alt="" class="loading" loading="lazy">
+        <h3>Mountain flowers</h3>
+    </div>
+    
+    <div class="placeholder-loading" id="five"><img src="images/summer.jpg" alt="" class="loading" loading="lazy">
+        <h3>Summer mountains</h3>
+    </div>
+    
+    <div class="placeholder-loading" id="six"><img src="images/sunsetbeach.jpg" alt="" class="loading" loading="lazy">
+        <h3>Summer sunset</h3>
+    </div>
+    
+    <div class="placeholder-loading" id="seven"><img src="images/windy.jpg" alt="" class="loading" loading="lazy">
+        <h3>Windy spring</h3>
+    </div>
+    
+    <div class="placeholder-loading" id="eight"><img src="images/winter.jpg" alt="" class="loading" loading="lazy">
+        <h3>Snowy winter trees</h3>
+    </div>
+    
+    <div class="placeholder-loading" id="nine"><img src="images/wintermountains.jpg" alt="" class="loading" loading="lazy">
+        <h3>Winter mountains</h3>
+    </div>
+</section>
+<div class='foot'>
+    <h2>Contact information</h2>
+    <p>
+        123 S Main St <br>
+        555-555-5555 <br>
+        shae.carnahan@gmail.com
+    </p>
+    <div class='media'>
+    <img id="pin" src="/lesson5/images/pinterest.png" alt="pinterest" width="50px">
+    <img id='insta' src="/lesson5/images/instagram.jpg" alt="instagram" width="50px">
+    <img id='facebook' src="/lesson5/images/facebook.png" alt="facebook" width="50px">
+    </div>
+    <img id='map' src="/lesson5/images/rexburg map.jpg" alt="Medium placeholder">
+</div>
+<footer>    
+    <p class='copyright'>&copy; <span id='copyrightyear'></span> | Shae Carnahan | Idaho | <a href='https://www.byui.edu/online'>BYUI Online Learning</a> 
+    </p>
+    <p class='date'>Date: <span id='lastupdated'></span></p>
+</footer>
+<script>
+    const lu = document.querySelector('#lastupdated');
+    lu.textContent = document.lastModified;
+
+    const cry = document.querySelector('#copyrightyear');
+    cry.textContent = new Date().getFullYear();
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js">{
+    google: { https://fonts.googleapis.com/css2?family=Lato&display=swap
+      families: [
+         'Lato'
+      ]
+    }
+  }
+</script>
+</body>
+</html>
