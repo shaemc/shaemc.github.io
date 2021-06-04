@@ -13,16 +13,4 @@ const loadImages = (image) => {
 imagesToLoad.forEach((img) => {
     loadImages(img);
   });
-
-// if ("IntersectionObserver" in window) {
-//     const imgObserver = new IntersectionObserver((items, observer) => {
-//         items.forEach((item) => {
-//         });
-//     }, imgOptions);
-
-//     imagesToLoad.forEach((img) => {
-//        imgObserver.observe(img);
-//     });
-// }
-// else{
-// }
+  
