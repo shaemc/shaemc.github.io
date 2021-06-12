@@ -8,39 +8,38 @@ body{
     font-family: 'Ubuntu', sans-serif;
     text-align: center;
 }
-.head{
+tbody tr:nth-child(1) {
     background-color: #628CA6;
     font-size: 30px;
 }
-.row1 {
+tbody tr:nth-child(2) {
     background-color: #628CA6;
     padding: 20px;
     color: white;
     font-size: 18px;
 }
-.row2 {
+tbody tr:nth-child(3) {
     background-color: #E7FFED;
 }
-.row3 {
+tbody tr:nth-child(4) {
     background-color: #E7F0ED;
 }
-.row4 {
+tbody tr:nth-child(5) {
     background-color: #E7FFED;
 }
-.row5 {
+tbody tr:nth-child(6) {
     background-color: #E7F0ED;
 }
-.row6 {
+tbody tr:nth-child(7) {
     background-color: #E7FFED;
 }
-.row7 {
+tbody tr:nth-child(8) {
     background-color: #E7F0ED;
 }
-.row8{
+tbody tr:nth-child(9) {
     background-color: #7FB9C2;
     font-size: 12px;
 }
-
 td, th {
     padding:10px;
 }
