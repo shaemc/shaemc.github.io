@@ -1,16 +1,16 @@
 body {
-    /* margin: 0 auto; */
-    max-width: 500px;
-    padding: 10px;
+    /* margin: 0 auto; 
+    max-width: 500px;*/
+    
 }
 body {
     background-color: lightgray;
 }
 section {
+    width: 275px;
     background-color: #B9B9CC;
     border: 2px solid #9F9FBF;
-    padding: .5em 1em .75em 1em;
-    /* 10px 0px 10px 50px; */
+    padding: 10px;
     text-align: center;
     margin: 10px;
 }
@@ -28,6 +28,7 @@ p {
     font-family: 'Roboto', sans-serif;
 }
 img {
+    width: 200px;
     border-radius: 15px;
     box-shadow: 10px 10px 5px gray;
 }
@@ -47,7 +48,7 @@ img {
 @media only screen and (min-width: 54.5em){
     .cards {
         display: grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
     body{
         background-color: lightgray;
