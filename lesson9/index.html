@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/weatherpage.css">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img id='rainboots' src="/lesson3/images/boots.png" alt="rainboots">
+        <h1>What Shoes to Wear</h1>
+        <h4>Come rain or shine to find the perfect footwear!</h4>
+        <a class="ham" href="#">&#9776;</a>
+    </header>
+    <nav>
+        <ul id='navigation'>
+            <li></li>
+            <li><a class='active' href="/lesson6/index.html">Home</a></li>
+            <li><a href="#">Preston</a></li>
+            <li><a href="#">Soda Springs</a></li>
+            <li><a href="#">Fish Haven</a></li>
+            <li><a  href="gallery-7.html">Storm Center</a></li>
+            <li><a href="#">Gallery</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="info"></section>
+
+    </main>
+<div class='foot'>
+    <h2>Contact information</h2>
+    <p>
+        123 S Main St <br>
+        555-555-5555 <br>
+        shae.carnahan@gmail.com
+    </p>
+    <div class='media'>
+    <img id="pin" src="/lesson5/images/pinterest.png" alt="pinterest" width="50px">
+    <img id='insta' src="/lesson5/images/instagram.jpg" alt="instagram" width="50px">
+    <img id='facebook' src="/lesson5/images/facebook.png" alt="facebook" width="50px">
+    </div>
+    <img id='map' src="/lesson5/images/rexburg map.jpg" alt="Medium placeholder">
+</div>
+<footer>    
+    <p class='copyright'>&copy; <span id='copyrightyear'></span> | Shae Carnahan | Idaho | <a href='https://www.byui.edu/online'>BYUI Online Learning</a> 
+    </p>
+    <p class='date'>Date: <span id='lastupdated'></span></p>
+</footer>
+<script>
+    const lu = document.querySelector('#lastupdated');
+    lu.textContent = document.lastModified;
+
+    const cry = document.querySelector('#copyrightyear');
+    cry.textContent = new Date().getFullYear();
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js">{
+    google: { https://fonts.googleapis.com/css2?family=Lato&display=swap
+      families: [
+         'Lato'
+      ]
+    }
+  }
+</script>
+<script src="javascript/weatherpage.js"></script>
+</body>
+</html>
