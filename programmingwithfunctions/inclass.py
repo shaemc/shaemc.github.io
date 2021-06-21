@@ -41,30 +41,79 @@
 
 # WEEK 9
 # pip install pandas
-student = {
-    "name": "Johnny",
-    "number": 1212361297
-}
+# student = {
+#     "name": "Johnny",
+#     "number": 1212361297
+# }
 
-print(student['name'])
+# print(student['name'])
 
-import pandas as pd
-df = pd.read_csv("w09water.csv") #this is an excel page that you do not have, if you want to test it then get one you do have :)
-print(df.dtypes)
-print(df.describe())
+# import pandas as pd
+# df = pd.read_csv("w09water.csv") #this is an excel page that you do not have, if you want to test it then get one you do have :)
+# print(df.dtypes)
+# print(df.describe())
 
-print(df["meterSize"])
+# print(df["meterSize"])
 
-df = pd.read_csv("w09water.csv")
+# df = pd.read_csv("w09water.csv")
 
-meterColumn = df["meterSize"] #the quotes are names in the csv file
+# meterColumn = df["meterSize"] #the quotes are names in the csv file
 
-filteredDataFrame = df[(df["meterSize"] < 0.76) & (df['numberOfDays'] < 20)]
+# filteredDataFrame = df[(df["meterSize"] < 0.76) & (df['numberOfDays'] < 20)]
 
-filteredMeterColumn = df[meterColumn < 0.8] #this is another way of writing the line above!
+# filteredMeterColumn = df[meterColumn < 0.8] #this is another way of writing the line above!
 
-filteredNumberOfDays = df["numberOfDays"]
+# filteredNumberOfDays = df["numberOfDays"]
 
-shortenedDataFrame = filteredDataFrame[['meterSize', 'numberOfDays']]
+# shortenedDataFrame = filteredDataFrame[['meterSize', 'numberOfDays']]
 
-print(filteredMeterColumn)
+# print(filteredMeterColumn)
+
+#WEEK 10
+import math
+
+def main():
+    ## prompt user for how many circles they have
+    numberOfCircles = promptForNumberOfCircles()
+
+    ## get area of each
+    areas = loopForCircles(numberOfCircles)
+
+    ## display the area of each
+    print(areas)
+
+def loopForCircles(numberOfCircles):
+    areas = []
+    for _ in range(0, numberOfCircles):
+        r = promptForRadius()
+        a = computeCircleArea(r)
+        #print(a)
+        areas.append(a)
+    return areas
+
+def promptForRadius():
+    while True:
+        try:
+            rad = int(input('Please enter radius: '))
+            break
+        
+        except ValueError:
+            print("Oops!  That was no valid number.  Try again...")
+
+    return rad
+
+def promptForNumberOfCircles():
+    while True:
+        try:
+            num = int(input('Please enter the number of circles you are working with: '))
+            break
+        
+        except ValueError:
+            print("Oops!  That was no valid number.  Try again...")
+
+    return num
+
+def computeCircleArea(radius):
+    return math.pi * radius**2
+
+main()
