@@ -18,7 +18,7 @@ fetch(requestURL)
     // let image = document.createElement('img')
 
     h2.textContent = weather.name;
-    p.textContent = weather.[temp]; //THIS IS WRONG figure out the square bracketsok
+    p.textContent = weather.temp; //THIS IS WRONG figure out the square bracketsok
         // p.textContent = 'Date of birth: ' + prophets[i].birthdate;
         // p2.textContent = 'Place of birth: ' + prophets[i].birthplace;
         // image.setAttribute('src', prophets[i].imageurl);
