@@ -187,10 +187,10 @@ header h1 {
     width: 100%;
 }
 
-.styling {
+.fiveday {
     background-color: white;
+    margin: 10px;
 }
-
 
 @media only screen and (min-width: 34.5em){
     body {
