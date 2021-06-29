@@ -70,50 +70,77 @@
 # print(filteredMeterColumn)
 
 #WEEK 10
-import math
+# import math
 
-def main():
-    ## prompt user for how many circles they have
-    numberOfCircles = promptForNumberOfCircles()
+# def main():
+#     ## prompt user for how many circles they have
+#     numberOfCircles = promptForNumberOfCircles()
 
-    ## get area of each
-    areas = loopForCircles(numberOfCircles)
+#     ## get area of each
+#     areas = loopForCircles(numberOfCircles)
 
-    ## display the area of each
-    print(areas)
+#     ## display the area of each
+#     print(areas)
 
-def loopForCircles(numberOfCircles):
-    areas = []
-    for _ in range(0, numberOfCircles):
-        r = promptForRadius()
-        a = computeCircleArea(r)
-        #print(a)
-        areas.append(a)
-    return areas
+# def loopForCircles(numberOfCircles):
+#     areas = []
+#     for _ in range(0, numberOfCircles):
+#         r = promptForRadius()
+#         a = computeCircleArea(r)
+#         #print(a)
+#         areas.append(a)
+#     return areas
 
-def promptForRadius():
-    while True:
-        try:
-            rad = int(input('Please enter radius: '))
-            break
+# def promptForRadius():
+#     while True:
+#         try:
+#             rad = int(input('Please enter radius: '))
+#             break
         
-        except ValueError:
-            print("Oops!  That was no valid number.  Try again...")
+#         except ValueError:
+#             print("Oops!  That was no valid number.  Try again...")
 
-    return rad
+#     return rad
 
-def promptForNumberOfCircles():
-    while True:
-        try:
-            num = int(input('Please enter the number of circles you are working with: '))
-            break
+# def promptForNumberOfCircles():
+#     while True:
+#         try:
+#             num = int(input('Please enter the number of circles you are working with: '))
+#             break
         
-        except ValueError:
-            print("Oops!  That was no valid number.  Try again...")
+#         except ValueError:
+#             print("Oops!  That was no valid number.  Try again...")
 
-    return num
+#     return num
 
-def computeCircleArea(radius):
-    return math.pi * radius**2
+# def computeCircleArea(radius):
+#     return math.pi * radius**2
 
-main()
+# main()
+
+# #WEEK 11
+# student = {
+#     "name": "ted",
+#     "lastname": "jones",
+#     "age": 5,
+# }
+
+# student2 = {
+#     "name": "jennifer",
+#     "lastname": "jones",
+#     "age": 15,
+# }
+
+# newstudent('ted', 'jones', 5)
+
+#better way to write for loops
+
+def fahr_to_cels(f):
+    return (f - 32) * (5/9)
+
+fahr_temps = [72, 65, 71, 75, 82, 87, 68]
+print(f"Fahrenheit: {fahr_temps}")
+
+cels_temps = list(map(fahr_to_cels, fahr_temps))
+cels_temps = [round(c) for c in cels_temps]
+print(f'Celcius: {cels_temps}')
