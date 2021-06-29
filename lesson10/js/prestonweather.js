@@ -1,6 +1,6 @@
 // 5604473
 
-const requestURL = 'https://api.openweathermap.org/data/2.5/weather?zip=83263&appid=a5a58e084b9faac42b062f6e4dfc63ce'
+const requestURL = ' https://api.openweathermap.org/data/2.5/weather?zip=83263&appid=a5a58e084b9faac42b062f6e4dfc63ce&units=imperial'
 
 fetch(requestURL)
   .then(function (response) {
@@ -61,11 +61,13 @@ fetch(requestURL)
         let fiveday = document.createElement('section');
         let h2 = document.createElement('h2');
         let p = document.createElement('p');
-        let icon = document.createElement('p');
+        let icon = document.createElement('img');
+            
 
         h2.textContent = five.name;
         p.textContent = five.main.temp;
-        icon.textContent = five.weather[0].icon;
+        icon.setAttribute('src', `https://openweathermap.org/img/${five.weather[0].icon}.jpg`); //this is wrong
+        
 
         fiveday.appendChild(h2);
         fiveday.appendChild(p);
