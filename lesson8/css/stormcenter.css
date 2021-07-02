@@ -7,16 +7,21 @@ img {
     max-width:800px;
     margin: 20px;
 } */
-section {
+/* section {
     display: grid;
     grid-template-columns: 425px;
     grid-template-rows: 325px 325px 325px 325px 325px 325px 325px 325px 325px;
-}
+} */
 h3{
     padding-left: 5px;
 }
 
-
+fieldset {
+    width: 1fr;
+}
+fieldset h3 {
+    padding-left: 0px;
+}
 #rainboots {
     width: 100px;
     height: 100px;
@@ -151,8 +156,9 @@ header h1 {
 
 .foot {
     display: grid;
-    grid-template-columns: 400px 1fr;
-    grid-template-rows: 45px 85px 75px;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 50px 85px 75px;
+    padding-top: 25px;
 }
 .foot p {
     grid-column: 1/2;
@@ -167,6 +173,8 @@ header h1 {
     grid-column: 2/4;
     grid-row: 1/4;
     width: 100%;
+    max-height: 200px;
+    object-fit: cover;
 }
 
 
@@ -175,11 +183,11 @@ header h1 {
         max-width:800px;
         margin: 20px;
     } */
-    section {
+    /* section {
         display: grid;
         grid-template-columns: 425px 425px;
         grid-template-rows: 325px 325px 325px 325px 325px;
-    }
+    } */
     #one {
         grid-column: 1/2;
     }
@@ -259,18 +267,22 @@ header h1 {
     height: 250px;
     object-fit: cover;
     }
+    fieldset {
+        width: 1.5fr;
+        max-width: 1150px;
+    }
 }
 
 @media only screen and (min-width: 54.5em){
-    /* body {
-        margin: 25px;
-    } */
-    section {
+    body {
+        max-width: 800px;
+    }
+    /* section {
         display: grid;
         grid-template-columns: 400px 400px 400px;
         grid-template-rows: 325px 325px 325px;
         gap: 20px;
-    }
+    } */
     .placeholder-loading:hover{
         box-shadow: 0 0 50px black;
     }
@@ -310,7 +322,7 @@ header h1 {
     }
     main {
         margin: 0 auto;
-        max-width: 1200px;
+        /* max-width: 1200px; */
         background-color: white;
         text-align: center;
         padding-bottom: 5px;
@@ -325,6 +337,14 @@ header h1 {
     
     #map {
         max-width: 400px;
+        margin-right: 5px;
+    }
+
+    .foot {
+        display: grid;
+        grid-template-columns: 395px 1fr;
+        grid-template-rows: 50px 85px 75px;
+        padding-top: 25px;
     }
     form {
         font-size: 20px;
@@ -334,5 +354,9 @@ header h1 {
     }
     .form {
         padding-left: 20px;
+    }
+    fieldset {
+        width: 3fr;
+        width: 700px;
     }
 }

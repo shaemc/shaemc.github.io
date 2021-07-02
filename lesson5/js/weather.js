@@ -37,11 +37,11 @@ window.addEventListener("load", () => {
 
   dateFooter.innerHTML = `${days[dayWeek]}, ${day} ${months[month]} ${year}`;
 
-  if (dayWeek !== 5) {
-    banner.style.display = "none";
-  } else {
-    banner.style.display = "flex";
-  }
+  // if (dayWeek !== 5) {
+  //   banner.style.display = "none";
+  // } else {
+  //   banner.style.display = "flex";
+  // }
 
   hamButton.addEventListener(
     "click",
