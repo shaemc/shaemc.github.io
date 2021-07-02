@@ -1,0 +1,29 @@
+Significant Program Proposal:
+
+A program that reads a text file and counts how often each word occurs in the file.
+
+1. What is the title of your program?
+    My program will be named countwords
+
+2. What real world problem will your program address or help to solve?
+    This will help me find out how many of each word is in a text file. This will help me to proofread my papers 
+    for English class by showing me if I use a word or a phrase too much in my writing!
+
+3. What will you learn from developing this program?
+    I think that I will learn how to develop my own functions, while also making test functions at the same time.
+
+4. What Python modules will your program use? (Some examples are: csv,
+datetime, functools, matplotlib, math, pandas, pytest, random, requests,
+and tkinter.)
+    My program will use text files and pytest. Possibly more but those are the only ones I can think of right now!
+
+5. Will you separate your Python program into functions that each
+perform a single task?
+    Yes
+
+6. Will you write test functions to test many of your program functions?
+    Yes
+
+I started making a text file with information so that I can use my functions to count those words. 
+I also started making a function with a for loop to go through each word to count how many times it is in the 
+text file! Next week I will work more on my function and will make the test function!
