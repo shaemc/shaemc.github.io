@@ -51,7 +51,7 @@ fetch(requestURL)
     document.querySelector('div.cards').appendChild(card);
     });
 
-const requestURL2 = 'https://api.openweathermap.org/data/2.5/weather?zip=83263&appid=a5a58e084b9faac42b062f6e4dfc63ce&units=imperial'
+const requestURL2 = 'https://api.openweathermap.org/data/2.5/forecast?zip=83263&appid=a5a58e084b9faac42b062f6e4dfc63ce&units=imperial'
 
 fetch(requestURL2)
     .then(function (response) {
@@ -59,16 +59,27 @@ fetch(requestURL2)
     })
     .then(function (five) {
         console.table(five); 
+        console.log(five.list[6].dt_txt);
 
-        // const days = [
-        //   "Saturday",
-        //   "Sunday",
-        //   "Monday",
-        //   "Tuesday",
-        //   "Wednesday",
-        //   "Thursday",
-        //   "Friday",
-        // ];
+        let filter = five.list.filter(time => time.dt_txt.split(' ')[1] == '18:00:00');
+
+        let splitday = filter[0].dt_txt.split(' ')[0].split('-');
+        let splitday1 = filter[1].dt_txt.split(' ')[0].split('-');
+        let splitday2 = filter[2].dt_txt.split(' ')[0].split('-');
+        let splitday3 = filter[3].dt_txt.split(' ')[0].split('-');
+        let splitday4 = filter[4].dt_txt.split(' ')[0].split('-');
+
+        let date1 = `${splitday[1]}/${splitday[2]}`;
+        let date2 = `${splitday1[1]}/${splitday1[2]}`;
+        let date3 = `${splitday2[1]}/${splitday2[2]}`;
+        let date4 = `${splitday3[1]}/${splitday3[2]}`;
+        let date5 = `${splitday4[1]}/${splitday4[2]}`;
+
+        document.querySelector('#day1').textContent = date1;
+        document.querySelector('#day2').textContent = date2;
+        document.querySelector('#day3').textContent = date3;
+        document.querySelector('#day4').textContent = date4;
+        document.querySelector('#day5').textContent = date5;
 
         let temp1 = document.querySelector('#temp1');
         let temp2 = document.querySelector('#temp2');
@@ -82,27 +93,15 @@ fetch(requestURL2)
         let icon4 = document.querySelector('#icon4');
         let icon5 = document.querySelector('#icon5');
 
-        // temp1.textContent = five.day[0].weather[0].main.temp;
-        // temp2.textContent = five.weather[1].main.temp;
-        // temp3.textContent = five.weather[2].main.temp;
-        // temp4.textContent = five.weather[3].main.temp;
-        // temp5.textContent = five.weather[4].main.temp;
+        temp1.textContent = filter[0].main.temp;
+        temp2.textContent = filter[1].main.temp;
+        temp3.textContent = filter[2].main.temp;
+        temp4.textContent = filter[3].main.temp;
+        temp5.textContent = filter[4].main.temp;
 
-        icon1.setAttribute('src', `https://openweathermap.org/img/wn/${five.weather[0].icon}@2x.png`);
-        icon2.setAttribute('src', `https://openweathermap.org/img/wn/${five.weather[0].icon}@2x.png`);
-        icon3.setAttribute('src', `https://openweathermap.org/img/wn/${five.weather[0].icon}@2x.png`);
-        icon4.setAttribute('src', `https://openweathermap.org/img/wn/${five.weather[0].icon}@2x.png`);
-        icon5.setAttribute('src', `https://openweathermap.org/img/wn/${five.weather[0].icon}@2x.png`);
-        
-        // let fiveday = document.createElement('section');
-        // let h2 = document.createElement('h2');
-        // let p = document.createElement('p');
-        // let icon = document.createElement('img');
-         
-        // h2.textContent = five.name;
-        // p.textContent = five.main.temp;   
-         // fiveday.appendChild(h2);
-        // fiveday.appendChild(p);
-        // fiveday.appendChild(icon);
-        // document.querySelector('div.fiveday').appendChild(fiveday);
+        icon1.setAttribute('src', `https://openweathermap.org/img/wn/${filter[0].weather[0].icon}@2x.png`);
+        icon2.setAttribute('src', `https://openweathermap.org/img/wn/${filter[1].weather[0].icon}@2x.png`);
+        icon3.setAttribute('src', `https://openweathermap.org/img/wn/${filter[2].weather[0].icon}@2x.png`);
+        icon4.setAttribute('src', `https://openweathermap.org/img/wn/${filter[3].weather[0].icon}@2x.png`);
+        icon5.setAttribute('src', `https://openweathermap.org/img/wn/${filter[4].weather[0].icon}@2x.png`);
     });
