@@ -148,23 +148,33 @@ header h1 {
     grid-template-columns: 60px 60px 60px 1fr;
 }
 #pin {
+    width: 50px;
+    height: 50px;
     grid-column: 1/2;
     margin: auto;
+    border-radius: 50px;
 }
 #insta {
+    width: 50px;
+    height: 50px;
     grid-column: 2/3;
     margin: auto;
+    border-radius: 50px;
 }
 #facebook {
+    width: 50px;
+    height: 50px;
     grid-column: 3/4;
     margin: auto;
+    border-radius: 50px;
 }
 
 
 .foot {
     display: grid;
     grid-template-columns: 200px 1fr;
-    grid-template-rows: 45px 85px 75px;
+    grid-template-rows: 50px 85px 75px;
+    padding-top: 25px;
 }
 .foot p {
     grid-column: 1/2;
@@ -285,7 +295,7 @@ h3 {
         width: 100%;
     }
     #map {
-        max-width: 400px;
+        max-width: 375px;
     }
     #sumimg {
     width: 100%;
@@ -359,7 +369,7 @@ h3 {
         width: 100%;
     }
     #map {
-        max-width: 400px;
+        max-width: 375px;
     }
     #sumimg {
         width: 100%;
@@ -395,5 +405,11 @@ h3 {
         width: 97%;
         grid-column: 1/2;
         grid-row: 6/7;
+    }
+    .foot {
+        display: grid;
+        grid-template-columns: 395px 1fr;
+        grid-template-rows: 50px 85px 75px;
+        padding-top: 25px;
     }
 }

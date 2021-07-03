@@ -139,18 +139,21 @@ header h1 {
     height: 50px;
     grid-column: 1/2;
     margin: auto;
+    border-radius: 50px;
 }
 #insta {
     width: 50px;
     height: 50px;
     grid-column: 2/3;
     margin: auto;
+    border-radius: 50px;
 }
 #facebook {
     width: 50px;
     height: 50px;
     grid-column: 3/4;
     margin: auto;
+    border-radius: 50px;
 }
 
 

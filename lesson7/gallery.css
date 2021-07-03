@@ -134,25 +134,29 @@ header h1 {
     height: 50px;
     grid-column: 1/2;
     margin: auto;
+    border-radius: 50px;
 }
 #insta {
     width: 50px;
     height: 50px;
     grid-column: 2/3;
     margin: auto;
+    border-radius: 50px;
 }
 #facebook {
     width: 50px;
     height: 50px;
     grid-column: 3/4;
     margin: auto;
+    border-radius: 50px;
 }
 
 
 .foot {
     display: grid;
-    grid-template-columns: 400px 1fr;
-    grid-template-rows: 45px 85px 75px;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 50px 85px 75px;
+    padding-top: 25px;
 }
 .foot p {
     grid-column: 1/2;
@@ -333,7 +337,12 @@ header h1 {
     #map {
         max-width: 400px;
     }
-
+    .foot {
+        display: grid;
+        grid-template-columns: 395px 1fr;
+        grid-template-rows: 50px 85px 75px;
+        padding-top: 25px;
+    }
 
 
 
