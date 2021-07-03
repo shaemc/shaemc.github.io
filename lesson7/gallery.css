@@ -188,6 +188,7 @@ header h1 {
         display: grid;
         grid-template-columns: 425px 425px;
         grid-template-rows: 325px 325px 325px 325px 325px;
+        object-fit: cover;
     }
     #one {
         grid-column: 1/2;
@@ -268,6 +269,9 @@ header h1 {
     height: 250px;
     object-fit: cover;
     }
+    /* .placeholder-loading img {
+        width: 100%;
+    } */
 }
 
 @media only screen and (min-width: 54.5em){
@@ -343,7 +347,9 @@ header h1 {
         grid-template-rows: 50px 85px 75px;
         padding-top: 25px;
     }
-
+    .placeholder-loading img {
+        width: 100%;
+    }
 
 
 }
