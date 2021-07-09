@@ -13,7 +13,7 @@ header {
     background-color: grey;
     display: grid;
     grid-template-columns: 110px 1.5fr .5fr;
-    grid-template-rows: 75px 50px;
+    grid-template-rows: 60px 50px;
     padding: 10px;
 }
 footer {
@@ -88,18 +88,19 @@ h1, h2, h3 {
     grid-row: 1/3;
 }
 h4 {
-    margin: 0 auto;
     grid-column: 2/3;
     grid-row: 2/3;
     font-family: 'Lato', sans-serif;
     color:#3D3D3D;
     text-align: left;
     padding-left: 10px;
+    margin: 0;
 }
 header h1 {
-    margin: 0 auto;
     grid-column: 2/3;
     grid-row: 1/3;
+    font-size: 28px; 
+    text-align: left;
 }
 #sum {
     background-color: #608BA9;
@@ -228,7 +229,7 @@ header h1 {
 #map {
     grid-column: 2/4;
     grid-row: 1/4;
-    width: 90%;
+    width: 95%;
 }
 
 .fiveday {
@@ -290,7 +291,7 @@ header h1 {
     nav header {
         display: grid;
     }
-    header a {
+    header .ham{
         display: none;
     }
     #fiveday {
