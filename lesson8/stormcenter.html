@@ -62,7 +62,7 @@
                 <option value="Tornado"></option>
             </datalist>
 
-            <label>Storm severity: <span id="severityOut">1</span></label><br>
+            <label>Storm severity: <span id="severityOut"></span></label><br>
             <input class="inputBox" type="range" min="1" max="10" value="1" id="severity" oninput="outputSeverity(value)" name="severity"></label><br>
             
            
@@ -123,5 +123,10 @@
   }
 </script>
 <script src="/lesson5/js/weather.js"></script>
+<script>
+    function outputSeverity(severity){
+    document.querySelector('#severityOut').textContent = severity
+}
+</script>
 </body>
 </html>
