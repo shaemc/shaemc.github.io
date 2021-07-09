@@ -67,6 +67,7 @@ fetch(requestURL)
     for (var i = 0; i < towns.length; i++ ) {
         if (towns[i].name == 'Preston' || towns[i].name == 'Fish Haven' || towns[i].name == 'Soda Springs') {
             let section = document.createElement('section');
+            section.id = 'town' + towns[i].name[0];
 
             let h2 = document.createElement('h2');
             let p = document.createElement('p');
