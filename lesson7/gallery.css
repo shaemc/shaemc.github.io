@@ -192,7 +192,6 @@ header h1 {
     img {
         width: 100%;
         max-width: 400px;
-        background-color: lightgray;
         object-fit: cover;
     }
     section {
@@ -295,7 +294,6 @@ header h1 {
     img {
         width: 100%;
         max-width: 400px;
-        background-color: lightgray;
         object-fit: cover;
     }
     section {
