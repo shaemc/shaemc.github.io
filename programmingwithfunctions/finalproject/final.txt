@@ -1,0 +1,1 @@
+This is a text file. The purpose of this file is to see how many times each word is written. Hopefully I can figure out how to count each word in this file and sort it into lists. That would be really cool. I have to use functions for this project!

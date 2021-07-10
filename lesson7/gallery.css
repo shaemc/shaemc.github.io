@@ -1,7 +1,9 @@
 img {
-    width: 400px;
-    height: 250px;
+    width: 100%;
+    max-width: 325px;
+    max-height: 200px;
     background-color: lightgray;
+    object-fit: cover;
 }
 /* body {
     max-width:800px;
@@ -10,7 +12,7 @@ img {
 section {
     display: grid;
     grid-template-columns: 425px;
-    grid-template-rows: 325px 325px 325px 325px 325px 325px 325px 325px 325px;
+    grid-template-rows: 270px 270px 270px 270px 270px 270px 270px 270px 270px;
 }
 h3{
     padding-left: 5px;
@@ -33,7 +35,7 @@ header {
     background-color: grey;
     display: grid;
     grid-template-columns: 110px 1.5fr .5fr;
-    grid-template-rows: 60px 50px;
+    grid-template-rows: 80px 85px;
     padding: 10px;
 }
 footer {
@@ -106,6 +108,7 @@ h1, h2, h3 {
     padding-top: 30px;
     grid-column: 3/4;
     grid-row: 1/3;
+    text-decoration: none;
 }
 h4 {
     grid-column: 2/3;
@@ -119,7 +122,7 @@ h4 {
 header h1 {
     grid-column: 2/3;
     grid-row: 1/3;
-    font-size: 28px; 
+    font-size: 25px; 
     text-align: left;
 }
 
@@ -177,8 +180,8 @@ header h1 {
 }
 
 #gallerypics {
-    padding-left: 5px;
     padding-bottom: 20px;
+    padding: 5px;
 }
 
 
@@ -187,6 +190,12 @@ header h1 {
         max-width:800px;
         margin: 20px;
     } */
+    img {
+        width: 100%;
+        max-width: 400px;
+        background-color: lightgray;
+        object-fit: cover;
+    }
     section {
         display: grid;
         grid-template-columns: 425px 425px;
@@ -257,6 +266,9 @@ header h1 {
     h1, h2 {
         font-family: 'Bebas Neue', cursive;
     }
+    header {
+        grid-template-rows: 60px 50px;
+    }
     nav header {
         display: grid;
     }
@@ -281,6 +293,12 @@ header h1 {
     /* body {
         margin: 25px;
     } */
+    img {
+        width: 100%;
+        max-width: 400px;
+        background-color: lightgray;
+        object-fit: cover;
+    }
     section {
         display: grid;
         grid-template-columns: 400px 400px 400px;
@@ -322,6 +340,9 @@ header h1 {
 
     body header footer{
         max-width: 1250px;
+    }
+    header {
+        grid-template-rows: 60px 50px;
     }
     #navigation {
         margin: 16px auto;
