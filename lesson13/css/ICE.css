@@ -1,0 +1,47 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #F4F7FE;
+}
+section {
+    margin: auto auto;
+    margin-top: 50px;
+    max-width: 300px;
+    background-color: white;
+    box-shadow: 3px 7px 5px #a5a2a2;
+    padding: 10px; 
+}
+#pend {
+    background-color: #FFF6E4;
+    color: #9F9173;
+    padding: 5px 12px 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+p {
+    color: grey;
+    float: right;
+    margin-top: -40px;
+    font-size: .8em;
+    margin-right: 60px;
+}
+h1 {
+    letter-spacing: 1.5px;
+}
+button {
+    background-color: #3572FF;
+    color: white;
+    padding: 7px 12px 7px 12px;
+    border: none;
+    border-radius: 2px;
+    justify-content: center;
+    align-items: center; 
+    font-size: 12px;
+}
+button .material-icons-outlined {
+    font-size: 10px;
+    
+}
+button #deets {
+    margin-top: -10px;
+    padding-bottom: 10px;
+}
