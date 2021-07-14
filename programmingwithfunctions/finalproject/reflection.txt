@@ -1,0 +1,25 @@
+1. Describe an experience you had this semester where you saw the power of
+functions.
+I think functions are way cool. They help to avoid repetition in your code, which definitely helps it to be more efficient
+and fast. I really liked our project on adding area codes to a list of phone numbers. I think that could be really 
+helpful in the real world. I also liked when we had to design within a program to make a picture. I thought it was 
+interesting to learn more about how to repeat certain items and where each pixel would be placing certain colors or
+items.
+
+
+2. In your judgment, what is the value of test functions?
+I honestly do not like test functions. I think that they are useful in finding bugs throughout your code by testing 
+each function individually, but they are still a bit confusing for me. I just learned that test functions only work
+on return statements, so they will not work if you just print your output, instead of returning it. That makes things
+a little harder to make test functions. I do think that it would be useful for a very large document, which we have
+not had to deal with in this class so once I get there, I am sure I will begin to like them more and more to help find
+bugs in my programs!
+
+
+3. Describe your process for troubleshooting and fixing a program that
+has a problem. What is one thing you can do to improve your process?
+I am honestly not very good at troubleshooting. I do know that I can use my debugger to find what each of my variables
+are being inputed as to make sure they are what I want them to be. I also think that I have a tendancy to move my if 
+statements around in my for loops until the work how I want them to. Working on learning more about how to use for loops
+with if statements would help me to spend less time on troubleshooting and more time on making my code work more 
+efficiently.

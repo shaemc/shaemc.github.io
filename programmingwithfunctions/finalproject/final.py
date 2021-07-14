@@ -7,8 +7,8 @@ def countwords(filename):
 
     for line in file:
         lower = line.lower()
-        exclaim = lower.replace('!', ' ')
-        period = exclaim.replace('.', ' ')
+        exclaim = lower.replace('!', '')
+        period = exclaim.replace('.', '')
 
         words = period.split(' ')
 
@@ -17,12 +17,20 @@ def countwords(filename):
                 dictionary[word] = dictionary[word] + 1
             else:
                 dictionary[word] = 1
-                
+    num = 0                
     for key in list(dictionary.keys()):
-        if dictionary[key] > 1:
-            print(f'The word "{key}" is written {dictionary[key]} times.')
+        number = dictionary[key]
+        if number > 1:
+            print(f'The word "{key}" is written {number} times.')
+            if number > num:
+                num = number
+                word = key
         else:
-            print(f'The word "{key}" is written {dictionary[key]} time.')
+            print(f'The word "{key}" is written {number} time.')
+
+    output = f'The word used most in your file is "{word}", and it is used {num} times.'
+    print(output)
+    return output
 
 if __name__ == '__main__':
     main()    
