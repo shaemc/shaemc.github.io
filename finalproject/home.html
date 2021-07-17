@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/finalproject/final.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&family=Noto+Serif+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Temple Inns and Suites</title>
+    
+</head>
+<body>
+        <header>
+            <a href="/finalproject/home.html"><img id='logo' src="/finalproject/images/templelogo.jpg" alt="Temple Inns and Suites Logo"></a>
+            <h1>Temple Inns and Suites</h1>
+            <a class="ham" href="#">☰</a>
+        </header>
+        <nav id="navigation">
+            
+        <ul id='navbar'>
+            <li></li>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="/finalproject/temple.html">Temples</a></li>
+            <li><a href="/finalproject/reservations.html">Reservations</a></li>
+            <li><a href="/finalproject/services.html">Services</a></li>
+            <!-- <li><a href="/finalproject/receptions.html">Receptions</a></li>
+            <li><a href="/finalproject/missionary.html">Missionary</a></li> -->
+            <li><a href="/finalproject/contact.html">Contact</a></li>
+        </ul>
+        </nav>
+<main class="homepage">
+    <div class='banner'>
+    <section id='ban'>
+    <a href="/finalproject/reservations.html">
+    <h2 >Reserve a room today!</h2>
+    <p>There is always more work to do at the temple and we have a place for you to stay!</p>
+    </a>
+    </section>
+    <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/meridian-idaho/800x450/meridian-idaho-1962625.jpg" alt="Meridain Temple">
+    </div>
+    
+    <div id='homemain'>
+        <section id="grid1">
+        <h1>Temple Inns and Suites</h1>
+        <p>Our goal here at Temple Inns and Suites is to help your righteous desires become a reality! We provide inns and suites near the
+            temple for ordinance workers, misisonaries, and anyone travelling to our nearest temple! We also proved special perks such as 
+            changing rooms!
+        </p></section>
+        <section id="grid2">
+        <h2>Temple of the week: Meridian Idaho</h2>
+        <h3>Temple information:</h3>
+        <p>
+            Phone number: 208-957-7300
+            Address: 7355 N Linder Rd - Meridian, ID 83646
+            Ordinance and Session schedule: By appointment only
+            Temple services: No clothing rental available. No cafeteria available. No patron housing available. No distribution center nearby.
+            Temple closures: 2 October, 2021, 31 October-2 January 2022
+        </p></section>
+    </div>
+</main>
+
+
+
+<footer>
+    <p class='copyright'>&copy; <span id='copyrightyear'></span> | Shae Carnahan | Idaho | Date: <span id='lastupdated'></span></p>
+</footer>
+</body>
+<script>
+    const lu = document.querySelector('#lastupdated');
+    lu.textContent = document.lastModified;
+
+    const cry = document.querySelector('#copyrightyear');
+    cry.textContent = new Date().getFullYear();
+</script>
+<script>
+    const hambutton = document.querySelector('.ham');
+    const mainnav = document.querySelector('#navigation');
+    hambutton.addEventListener('click', () => {mainnav.classList.toggle('responsive')}, false);
+</script>
+</html>

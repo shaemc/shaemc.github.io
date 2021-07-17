@@ -6,17 +6,17 @@
         "city":"Boise",
         "state":"ID",
         "zip": 83709,
-        "services": "No clothing rental available. No cafeteria available. No patron housing available. Distribution center nearby",
+        "services": "No clothing rental available. No cafeteria available. No patron housing available. Distribution center nearby.",
         "history": [
             "Announced - March 31, 1982","Groundbreaking - December 18, 1982","Dedicated - May 25, 1984","Rededicated - February 14, 1987","Rededicated - November 18, 2012"
         ],
         "ordinancesched": "By appointment only",
         "sessionsched": "By appointment only",
         "templeclosures": [
-            "2021: 2 October", "11 October-25 October", "24 November(Limited Operations)", "25 November 2021", "24 December-25 December 2021", "31 December 2021(Limited Operations)"
+            "2021: 2 October", " 11 October-25 October", " 24 November(Limited Operations)", " 25 November 2021", " 24 December-25 December 2021", " 31 December 2021(Limited Operations)"
         ],
-        "currentweather": anddlfk,
-        "imageurl":"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/boise-idaho/800x500/boise-idaho-temple-exterior-2012-1029111-wallpaper.jpg"
+        "imageurl":"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/boise-idaho/800x500/boise-idaho-temple-exterior-2012-1029111-wallpaper.jpg",
+        "weather": "https://api.openweathermap.org/data/2.5/weather?zip=83713&appid=a5a58e084b9faac42b062f6e4dfc63ce&units=imperial"
     },
     {
         "name":"Meridian Idaho Temple",
@@ -25,17 +25,17 @@
         "city":"Meridian",
         "state":"ID",
         "zip": 83646,
-        "services": "No clothing rental available. No cafeteria available. No patron housing available. No distribution center nearby",
+        "services": "No clothing rental available. No cafeteria available. No patron housing available. No distribution center nearby.",
         "history": [
             "Announced - April 2, 2011","Groundbreaking - August 23, 2014","Dedicated - November 19, 2017"
         ],
         "ordinancesched": "By appointment only",
         "sessionsched": "By appointment only",
         "templeclosures": [
-            "2 October, 2021", "31 October-2 January 2022"
+            "2 October, 2021", " 31 October-2 January 2022"
         ],
-        "currentweather": anddlfk,
-        "imageurl":"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/meridian-idaho/800x450/meridian-idaho-1962625.jpg"
+        "imageurl":"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/meridian-idaho/800x450/meridian-idaho-1962625.jpg",
+        "weather": "https://api.openweathermap.org/data/2.5/weather?zip=83646&appid=a5a58e084b9faac42b062f6e4dfc63ce&units=imperial"
     },
     {
         "name":"Twin Falls Idaho Temple",
@@ -44,17 +44,18 @@
         "city":"Twin Falls",
         "state":"ID",
         "zip": 83301,
-        "services": "No clothing rental available. No cafeteria available. No patron housing available. Distribution center nearby",
+        "services": "No clothing rental available. No cafeteria available. No patron housing available. Distribution center nearby.",
         "history": [
             "Announced - October 2, 2004","Groundbreaking - April 15, 2006","Dedicated - August 24, 2008"
         ],
         "ordinancesched": "By appointment only",
         "sessionsched": "By appointment only",
         "templeclosures": [
-            "2021: 13 September - 8 November", "24 November(Limited Operations)", "25 November", "25 December", "31 December"
+            "2021: 13 September - 8 November", " 24 November(Limited Operations)", " 25 November", " 25 December", " 31 December"
         ],
-        "currentweather": anddlfk,
-        "imageurl":"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/twin-falls-idaho/800x1280/twin-falls-temple-lds-1078656-wallpaper.jpg"
+        "imageurl":"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/twin-falls-idaho/800x1280/twin-falls-temple-lds-1078656-wallpaper.jpg",
+        "weather": "https://api.openweathermap.org/data/2.5/weather?zip=83301&appid=a5a58e084b9faac42b062f6e4dfc63ce&units=imperial"
+
     },
     {
         "name":"Pocatello Idaho Temple",
@@ -72,7 +73,7 @@
         "templeclosures": [
             "Not available in construction"
         ],
-        "currentweather": anddlfk,
-        "imageurl":"https://assets.ldscdn.org/4e/90/4e90dd3d451c6d79a544c443920f2bff6c8fc090/pocatello_idaho_temple.jpeg"
+        "imageurl":"https://assets.ldscdn.org/4e/90/4e90dd3d451c6d79a544c443920f2bff6c8fc090/pocatello_idaho_temple.jpeg",
+        "weather": "https://api.openweathermap.org/data/2.5/weather?zip=83201&appid=a5a58e084b9faac42b062f6e4dfc63ce&units=imperial"
     }
 ]
