@@ -74,6 +74,10 @@ nav {
     grid-column: 3/4;
     grid-row: 1/3;
     text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    align-self: center;
 }
 a {
     background-color: transparent;
@@ -126,7 +130,7 @@ fieldset{
 fieldset h2, label, input, select, textarea, p {
     margin: 10px;
     /* padding: 10px; */
-    width: 50%;
+    width: 95%;
     min-width: 50px;
 }
 fieldset button {
@@ -209,6 +213,65 @@ fieldset button {
 }
 
 
+/* subheader for missionary/weddings */
+#subhead {
+    display: grid;
+    grid-template-columns: 1fr 1fr 40px;
+    background-color: #8aa067;
+    margin: 0 auto;
+}
+#reception {
+    grid-column: 1/2;
+    list-style-type: none;
+    text-align: center;
+}
+#missionary {
+    grid-column: 2/3;
+    list-style-type: none;
+    text-align: center;
+}
+#subhead li:first-child {
+    display: block;
+} 
+#subhead a {
+    display: block;
+    text-decoration: none;
+    color: #143109;
+    padding:10px;
+}
+#subhead a.active {
+    background-color: #143109;
+    color: white;
+    /* border-bottom: 5px solid white;  */
+}
+#subhead a:hover, #subhead a.active:hover {
+    color: white;
+    background-color: #143109;
+}
+
+/* receptions page */
+.receptions{
+    margin: 10px;
+}
+.receptions a {
+    color: white;
+}
+
+/*  missionary page */
+.missionary {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 50px;
+    padding: 10px;
+}
+.missionary img {
+    width: 100%;
+}
+main li{
+    color: white;
+}
+
+
 /* Medium screen*/
 @media only screen and (min-width: 34.5em){
     header .ham {
@@ -225,7 +288,7 @@ fieldset button {
         background-color: #5F7044;
         list-style: none;
         display: grid;
-        grid-template-columns: repeat(5, auto);
+        grid-template-columns: auto auto auto auto auto 40px;
         text-align: center;
         margin: 0;
     }
@@ -235,9 +298,6 @@ fieldset button {
     nav{
         max-width: 100%;
         grid-column: 1/3;
-    }
-    #navbar {
-        grid-template-columns: repeat(5, auto);
     }
     #navbar li {
         display: block;
@@ -306,6 +366,17 @@ fieldset button {
         padding: 10px;
         z-index: -1;
     }
+
+    /*missionary page */
+    .missionary {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 50px;
+        padding: 10px;
+    }
+    .missionary h2 {
+        grid-column: 1/3;
+    }
 }
 
 /*Big screen*/
@@ -318,7 +389,7 @@ fieldset button {
         background-color: #5F7044;
         list-style: none;
         display: grid;
-        grid-template-columns: repeat(5, auto);
+        grid-template-columns: auto auto auto auto auto 40px;;
         text-align: center;
     }
     nav header {
@@ -326,9 +397,6 @@ fieldset button {
     }
     nav{
         max-width: 100%;
-    }
-    #navbar {
-        grid-template-columns: repeat(5, auto);
     }
     #navbar li {
         display: block;
@@ -379,5 +447,18 @@ fieldset button {
         width: 98%;
         padding: 10px;
         z-index: -1;
+    }
+
+
+
+    /*missionary page */
+    .missionary {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 50px;
+        padding: 10px;
+    }
+    .missionary h2 {
+        grid-column: 1/4;
     }
 }
