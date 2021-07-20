@@ -28,33 +28,25 @@ function buildTempleCard(temple){
                       <p class='info'>Session schedule: <p>${temple.sessionsched}</p></p>
                       <p class='info'>Temple services: <p>${temple.services}</p></p>
                       <p class='info'>Temple history: <p>${temple.history[0]}</p></p>
-                      <p class='info'>Temple closures: <p>${temple.templeclosures} </p></p>
-                      
-                      <p class='info'>Current temperature: <p id="temp"></p></p>
-
-                    
-
-                      `
-                      
-                      ;
+                      <p class='info'>Temple closures: <p>${temple.templeclosures} </p></p>`;
     document.querySelector("#temples").appendChild(card);
     
     
-    const requestURL = `${temple.weather}`
-    // 'https://api.openweathermap.org/data/2.5/weather?zip=83646&appid=a5a58e084b9faac42b062f6e4dfc63ce&units=imperial'
+    // const requestURL = `${temple.weather}`
+    // // 'https://api.openweathermap.org/data/2.5/weather?zip=83646&appid=a5a58e084b9faac42b062f6e4dfc63ce&units=imperial'
 
-    fetch(requestURL)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        console.table(data); 
+    // fetch(requestURL)
+    // .then(function (response) {
+    //     return response.json();
+    // })
+    // .then(function (data) {
+    //     console.table(data); 
 
-        let temp = document.querySelector('#temp');
+    //     let temp = document.querySelector('#temp');
         
-        temp.textContent = `${data.main.temp} °F`;
+    //     temp.textContent = `${data.main.temp} °F`;
 
-        temp.setAttribute('src', `https://openweathermap.org/img/wn/${filter[0].weather[0].icon}@2x.png`);
+    //     temp.setAttribute('src', `https://openweathermap.org/img/wn/${filter[0].weather[0].icon}@2x.png`);
         
-        });
+    //     });
 }
