@@ -44,14 +44,14 @@ function getDataAndDoSomething(url, action){ // can also be written this way -- 
 
 function renderTypeList(list){
     list = list.results;
-    console.log(list)
+    console.log(list);
 
     const typeListElement = document.querySelector('#typeList');
     
     const newList = filterResults(list);
     console.log(newList);
     
-    console.dir(typeListElement) //dir is like log but shows you more info in your console
+    console.dir(typeListElement); //dir is like log but shows you more info in your console
     newList.forEach((item) => {
         const newLi = document.createElement('li');
         newLi.innerText = item.name;
