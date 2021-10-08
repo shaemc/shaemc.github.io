@@ -1,0 +1,6 @@
+@use 'variables' as *;
+
+body {
+    font-size: $base-font-size;
+    font-family: $body-font;
+}

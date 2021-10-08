@@ -1,0 +1,30 @@
+fieldset p:nth-child(n+4){
+    display: none;
+}
+
+19 I think that the first would be better because it is more specific. It actually has the same specificity number, but it is based on finding the title fieldset2, which would be easier for someone else to find if they were looking at your code 10 years down the road!
+
+20 div.help is finding every div that also has the class of help. This applies only to selectors that have BOTH of these requirements
+
+div .help is looking for child elements of the div that have the class help
+
+This changes what will be selected by choosing any div.help which would choose the whole div, or using div .help which would only choose the elements within a div with a class of help.
+
+
+
+21 .help:before {
+
+    content: '(';
+    
+    }
+    
+    .help:after {
+    
+    content: ')';
+    
+    }
+
+
+22 fieldset p:nth-child(n+4){
+        display: none;
+    }

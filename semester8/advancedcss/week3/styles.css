@@ -1,0 +1,31 @@
+/*can also say darken($lightgray, 40);*/
+body {
+  font-size: 3em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+:root {
+  --primary-color: salmon;
+  /*interpolation - salmon which will change it to be salmon;*/
+}
+
+body {
+  color: #444;
+  width: 800px;
+}
+
+form {
+  max-width: 800px;
+  box-shadow: 10px 5px 5px black;
+}
+
+#contactform {
+  background-color: salmon;
+  padding: 10px;
+}
+#contactform input, #contactform textarea {
+  background-color: purple;
+  flex: 2;
+}
+
+/*# sourceMappingURL=styles.css.map */

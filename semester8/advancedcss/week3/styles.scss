@@ -1,0 +1,32 @@
+@use 'variables' as *;
+@use 'typography' as *;
+
+@mixin background {
+    max-width: 800px;
+    box-shadow: 10px 5px 5px black;
+}
+
+:root {
+    --primary-color: #{$primarycolor};
+     /*interpolation - #{$primarycolor} which will change it to be salmon;*/
+}
+
+body {
+    //background-color: $primarycolor;
+    color: $darkgray;
+    width: $width;
+    //background-color: var(--primarycolor); another way to write it :) 
+}
+form {
+    @include background();
+}
+
+#contactform {
+    background-color: $primarycolor;
+    padding: 10px;
+    input, textarea { //nesting :)
+        background-color: $secondarycolor;
+        flex: 2;
+        
+    }
+}

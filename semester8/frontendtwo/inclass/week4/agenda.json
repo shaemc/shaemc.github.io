@@ -1,0 +1,24 @@
+{
+    "event-name": "JamStack 2021",
+    "date": "October 6, 2021",
+    "tracks": [
+        {
+            "trackNum": 1, "name": "JamStack Now & Next", "color": "#56f1de"
+        },
+        {
+            "trackNum": 2, "name": "Intergration & Tooling", "color": "#ffab2c"
+        }
+    ],
+    "classes": [
+        {
+            "title": "JamStack: how it started, how it's going",
+            "time": "16:05",
+            "track": 1
+        },
+        {
+            "title": "JamStack: how it started, how it's going",
+            "time": "17:00",
+            "track": 2
+        }
+    ]
+}
