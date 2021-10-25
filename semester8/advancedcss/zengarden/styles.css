@@ -1,0 +1,91 @@
+header {
+  background-color: #284b63;
+  color: white;
+}
+
+header[role=banner] {
+  padding: 20px;
+}
+
+body {
+  background-color: #d9d9d9;
+  max-width: 1200px;
+}
+
+footer {
+  background-color: #284b63;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+footer a:link {
+  color: white;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  margin-bottom: -20px;
+}
+
+p {
+  font-family: "Bitter", serif;
+}
+
+.summary {
+  background-color: #ffffff;
+}
+
+.preamble {
+  background-color: #353535;
+  color: white;
+}
+
+.explanation {
+  background-color: #3c6e71;
+}
+
+.benefits {
+  background-color: #ffffff;
+}
+
+.participation {
+  background-color: #353535;
+  color: white;
+}
+
+.requirements {
+  background-color: #3c6e71;
+}
+
+.colors .background-color {
+  background-color: #d9d9d9;
+}
+
+.main-color {
+  background-color: #284b63;
+}
+
+.third-color {
+  background-color: #3c6e71;
+}
+
+.fourth-color {
+  background-color: #353535;
+}
+
+.fifth-color {
+  background-color: #ffffff;
+}
+
+/*# sourceMappingURL=styles.css.map */

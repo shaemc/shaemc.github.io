@@ -1,0 +1,76 @@
+/*This is the css we learned in class at this website: https://codepen.io/matkat/pen/EKaNZg?editors=0100*/
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .content {
+    width: 80%;
+    height: 500px;
+    border: 1px solid;
+   
+  }
+  
+  .red {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+    opacity: 1;
+    &:hover {
+    animation: rotate 10s;
+    }
+  }
+  
+  @keyframes rotate {
+    25% {
+      transform: translate(400px, 0);
+    }
+    50% {
+      transform: translate(400px, 400px);
+    }
+    75% {
+      transform: translate(0, 400px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  
+  .green {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+    transition: width 1s ease, height 1s ease;
+    &:hover {
+      width: 200px;
+      height: 200px;
+    }
+   
+  }
+  .yellow {
+  width: 100px;
+  height: 100px;
+  background-color: gold;
+    transform: translatex(0);
+    left:10;
+    transition: all 3s;
+    //position: absolute;
+    &:hover {
+      left: 300px;
+      transform: translatex(300px);
+    }
+  
+  }
+  .blue {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+    &:hover {
+      transition: width 3s ease, opacity 5s;
+      width: 880px;
+      opacity: 0%;
+      }
+  }
+  
