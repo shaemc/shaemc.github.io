@@ -17,6 +17,11 @@ $byui-blue: #056cb6;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  color: white;
+  text-decoration: none;
+  font-size: 40px;
+  padding: 0;
+  margin: 0;
 }
 img {
   max-width: 100%;
@@ -30,4 +35,26 @@ img {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+.icon-byui-logo {
+  background-color: black;
+  padding: 16px;
+}
+.site-banner{
+  background-color: $byui-blue;
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -50px;
+
+
+  &__right a{
+    justify-content: flex-end;
+  }
+
+  &__left {
+    justify-content: flex-start;
+  }
 }

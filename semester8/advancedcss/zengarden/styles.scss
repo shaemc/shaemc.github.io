@@ -4,6 +4,8 @@
 @use 'organisms' as *; 
 @use 'variables' as *;
 
+// add media queries for mobile view and ipad view
+
 @mixin background {
     max-width: 1200px;
 }
