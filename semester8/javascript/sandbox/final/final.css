@@ -1,0 +1,7 @@
+section {
+    border: solid black 1px;
+}
+.calendar {
+    display: flex;
+    flex-direction: row;
+}
