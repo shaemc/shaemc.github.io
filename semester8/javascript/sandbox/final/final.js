@@ -5,38 +5,84 @@
 // 4.	Place that meal into a calendar (weekly?) for that day, within the js file add it by using innerHTML?
 // 5.	Go back and click the button for each of the rest of the 7 days
 
-
-//const url = "/sandbox/final/final.json";
-
 const json = {
     meals: [
         {
             food: "chicken salad",
             ingredients: "chicken, salad"
-        
         },
         {
             food: "tacos",
             ingredients: "chicken, lettuce, tortillas, beans"
-
         },
         {
             food: "fajitas",
             ingredients: "chicken, lettuce, tortillas, peppers"
-
-        }
-    ],
-    init: function() {
-        fillCalendar(this);
-        renderSections(this.meals);
-    },    
+        },
+        {
+            food: "pancakes",
+            ingredients: "bacon, pancake mix"
+        }, 
+        {
+            food: "spaghetti",
+            ingredients: "chicken, alfredo, breadsticks"
+        },
+        {
+            food: "stir fry",
+            ingredients: "chicken, broccoli, rice"
+        },
+        {
+            food: "pizza",
+            ingredients: "pepperoni, sauce, crust, cheese"
+        },
+    ]   
 }
+const usedmeals = [];
+
+const button = document.querySelector(".button").addEventListener("click", fillCalendar);
+
+function mealFilter(){
+    // this function should grab the food names from our json file and filter through them to pick a random one to place in the calendar
+    //add an if statement to see if the day is full already
+   // url.this.meals.filter(random);
+   do {
+    numberofmeals = Math.floor(Math.random() * json.meals.length);
+   } while(checkDuplicate(numberofmeals))
+    meal = json.meals[numberofmeals];
+    return meal;
+}
+function checkDuplicate(index, usedMeals){
+    //FINISH THIS FUNCTION
+    //check to see if index is in usedmeals
+    //if true return true into mealFilter function
+    // if false put it into usedMeals and return false
+    return false;
+}
+// mealFilter();
+function fillCalendar(calendar) {
+    const sunday = document.querySelector(".sunday");
+    const monday = document.querySelector(".monday");
+    const tuesday = document.querySelector(".tuesday");
+    const wednesday = document.querySelector(".wednesday");
+    const thursday = document.querySelector(".thursday");
+    const friday = document.querySelector(".friday");
+    const saturday = document.querySelector(".saturday");
+
+    sunday.innerHTML = `<h2>Sunday </h2> ${mealFilter().food}`;
+    monday.innerHTML = `<h2>Monday </h2> ${mealFilter().food}`;
+    tuesday.innerHTML = `<h2>Tuesday </h2> ${mealFilter().food}`;
+    wednesday.innerHTML = `<h2>Wednesday </h2> ${mealFilter().food}`;
+    thursday.innerHTML = `<h2>Thursday </h2> ${mealFilter().food}`;
+    friday.innerHTML = `<h2>Friday </h2> ${mealFilter().food}`;
+    saturday.innerHTML = `<h2>Saturday </h2> ${mealFilter().food}`;
+
+    return calendar;
+}
+
+
 // const result = fetch(url) // .then(function);
 
 // console.log(result);
-
-const button = document.querySelector(".button").addEventListener("click", mealFilter());
-
 
 
 // function mealButton(){
@@ -62,41 +108,6 @@ const button = document.querySelector(".button").addEventListener("click", mealF
         
 //     }
 // }
-
-function mealFilter(){
-    // this function should grab the food names from our json file and filter through them to pick a random one to place in the calendar
-    //add an if statement to see if the day is full already
-   // url.this.meals.filter(random);
-}
-
-function renderSections(sections) {
-    const html = url.map(
-      (section) => `<tr>
-      <td>${section.meal.food}</td>`
-    );
-    document.querySelector("#sections").innerHTML = html.join("");
-  }
-
-  function fillCalendar(calendar) {
-    const sunday = document.querySelector(".sunday");
-    const monday = document.querySelector(".monday");
-    const tuesday = document.querySelector(".tuesday");
-    const wednesday = document.querySelector(".wednesday");
-    const thursday = document.querySelector(".thursday");
-    const friday = document.querySelector(".friday");
-    const saturday = document.querySelector(".saturday");
-    sunday.textContent = json.meals[0].food;
-    monday.textContent = json.meals[1].food;
-    tuesday.textContent = json.meals[2].food;
-    wednesday.textContent = json.meals;
-    thursday.textContent = json.meals;
-    friday.textContent = json.meals;
-    saturday.textContent = json.meals;
-
-    return calendar;
-  }
-
-fillCalendar();
 
 // Stretch challenge:
 // 1.	Connect your json file with the usda food api (https://fdc.nal.usda.gov/api-guide.html ) and write down all of the ingredients that you would need for each meal

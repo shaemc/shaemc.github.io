@@ -1,5 +1,6 @@
 section {
     border: solid black 1px;
+    display: block; /* This needs to be changed*/
 }
 .calendar {
     display: flex;
