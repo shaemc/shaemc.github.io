@@ -21,6 +21,7 @@ header[role=banner]{
 
 body {
     background-color: $background-color;
+    // background-image: url('background-image.jpg');
     @include background();
     margin: 0 auto;
 }
@@ -96,13 +97,19 @@ p {
     background-color: $fifth-color;
 }    
 
+p {
+    max-width: 70ch;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
 /* Grid CSS */
 .intro {
     
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 125px 90px 330px;
-    
+    grid-template-rows: 130px 130px 460px;
+    background-image: url("flower.png");
 }
 header {
     grid-column: 1/4;
@@ -114,7 +121,7 @@ header {
 .page-wrapper{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: .5fr 1fr;
+    grid-template-rows: 0fr 1fr;
     margin-left: -5px;
 }
 .summary {
@@ -135,7 +142,7 @@ header {
     grid-row: 2/3;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 200px 300px 405px 60px;
+    grid-template-rows: 370px 490px 756px 60px;
 }
 aside {
     grid-column: 3/4;
@@ -145,6 +152,8 @@ aside {
     grid-column: 1/5;
     grid-row: 1/4;
     padding-left: 20px;
+    background: url(flower.png) top right no-repeat;
+    background-color: #EAF4F4;
 }
 .participation {
     grid-column: 2/5;
@@ -177,6 +186,8 @@ p[role=contentinfo] {
     width: 100%;
     margin: 30px 0px 0px -20px;
     padding: 20px 169px;
+    font-size: 1em;
+    max-width: 111ch;
     & a {
         color: white;
     }
