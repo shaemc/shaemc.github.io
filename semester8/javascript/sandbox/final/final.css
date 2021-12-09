@@ -1,8 +1,18 @@
-section {
-    border: solid black 1px;
-    display: block; /* This needs to be changed*/
+body{
+    background-color: lightblue;
+}
+
+.calendar section {
+    background-color: white;
+    width: 200px;
+    border: solid black 5px;
+    border-radius: 10px;
 }
 .calendar {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+}
+.calendar h2, .calendar p {
+    padding: 10px;
 }

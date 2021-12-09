@@ -8,36 +8,41 @@
 const json = {
     meals: [
         {
-            food: "chicken salad",
+            food: "Chicken salad",
             ingredients: "chicken, salad"
         },
         {
-            food: "tacos",
+            food: "Tacos",
             ingredients: "chicken, lettuce, tortillas, beans"
         },
         {
-            food: "fajitas",
+            food: "Fajitas",
             ingredients: "chicken, lettuce, tortillas, peppers"
         },
         {
-            food: "pancakes",
+            food: "Pancakes",
             ingredients: "bacon, pancake mix"
         }, 
         {
-            food: "spaghetti",
+            food: "Spaghetti",
             ingredients: "chicken, alfredo, breadsticks"
         },
         {
-            food: "stir fry",
+            food: "Stir fry",
             ingredients: "chicken, broccoli, rice"
         },
         {
-            food: "pizza",
+            food: "Pizza",
+            ingredients: "pepperoni, sauce, crust, cheese"
+        },
+        {
+            food: "Brownies",
             ingredients: "pepperoni, sauce, crust, cheese"
         },
     ]   
 }
-const usedmeals = [];
+let usedmeals = [];
+let ingredients = [];
 
 const button = document.querySelector(".button").addEventListener("click", fillCalendar);
 
@@ -45,21 +50,34 @@ function mealFilter(){
     // this function should grab the food names from our json file and filter through them to pick a random one to place in the calendar
     //add an if statement to see if the day is full already
    // url.this.meals.filter(random);
+
    do {
     numberofmeals = Math.floor(Math.random() * json.meals.length);
-   } while(checkDuplicate(numberofmeals))
+   } while(checkDuplicate(numberofmeals, usedmeals))
     meal = json.meals[numberofmeals];
+    ing = meal.ingredients.split(',');
+    ingredients.push(ing);
+    usedmeals.push(numberofmeals);
     return meal;
 }
-function checkDuplicate(index, usedMeals){
+function checkDuplicate(index, usedmeals){
     //FINISH THIS FUNCTION
     //check to see if index is in usedmeals
-    //if true return true into mealFilter function
-    // if false put it into usedMeals and return false
+    for(var i=0; i<usedmeals.length; i++){
+        if (usedmeals[i]==index){
+            return true;
+        }
+        
+    }
     return false;
+    // //if true return true into mealFilter function
+    // if false put it into usedMeals and return false
+    //usedmeals.indexOf(index);
+
 }
 // mealFilter();
 function fillCalendar(calendar) {
+    usedmeals = [];
     const sunday = document.querySelector(".sunday");
     const monday = document.querySelector(".monday");
     const tuesday = document.querySelector(".tuesday");
@@ -68,46 +86,33 @@ function fillCalendar(calendar) {
     const friday = document.querySelector(".friday");
     const saturday = document.querySelector(".saturday");
 
-    sunday.innerHTML = `<h2>Sunday </h2> ${mealFilter().food}`;
-    monday.innerHTML = `<h2>Monday </h2> ${mealFilter().food}`;
-    tuesday.innerHTML = `<h2>Tuesday </h2> ${mealFilter().food}`;
-    wednesday.innerHTML = `<h2>Wednesday </h2> ${mealFilter().food}`;
-    thursday.innerHTML = `<h2>Thursday </h2> ${mealFilter().food}`;
-    friday.innerHTML = `<h2>Friday </h2> ${mealFilter().food}`;
-    saturday.innerHTML = `<h2>Saturday </h2> ${mealFilter().food}`;
+    sunday.innerHTML = `<h2>Sunday</h2> <p>${mealFilter().food}</p>`;
+    monday.innerHTML = `<h2>Monday</h2> <p>${mealFilter().food}</p>`;
+    tuesday.innerHTML = `<h2>Tuesday</h2> <p>${mealFilter().food}</p>`;
+    wednesday.innerHTML = `<h2>Wednesday</h2> <p>${mealFilter().food}</p>`;
+    thursday.innerHTML = `<h2>Thursday</h2> <p>${mealFilter().food}</p>`;
+    friday.innerHTML = `<h2>Friday</h2> <p>${mealFilter().food}</p>`;
+    saturday.innerHTML = `<h2>Saturday</h2> <p>${mealFilter().food}</p>`;
+
+    const groceries = document.querySelector(".grocerylist");
+
+    groceries.innerHTML = `<h3> Grocery List </h3> <p>${ingredients}</p>`; //filter through this ingredients to remove duplicates
+    // console.log(groceries.innerHTML);
 
     return calendar;
 }
 
+// function addToGroceryList(list){
+//     const groceries = document.querySelector(".grocerylist");
 
-// const result = fetch(url) // .then(function);
+//     groceries.innerHTML = `<h3> Grocery List </h3> <p>${mealFilter().ingredients}</p>`
+    
+//     console.log(mealFilter().ingredients)
 
-// console.log(result);
-
-
-// function mealButton(){
-//     if (sunday == ''){
-//         newmeal = url.this(mealFilter());
-//     }
-//     else if (monday == ''){
-
-//     }
-//     else if (tuesday == ''){
-        
-//     }
-//     else if (wednesday == ''){
-        
-//     }
-//     else if (thursday == ''){
-        
-//     }
-//     else if (friday == ''){
-        
-//     }
-//     else if (saturday == ''){
-        
-//     }
+//     return list;
 // }
+
+
 
 // Stretch challenge:
 // 1.	Connect your json file with the usda food api (https://fdc.nal.usda.gov/api-guide.html ) and write down all of the ingredients that you would need for each meal
