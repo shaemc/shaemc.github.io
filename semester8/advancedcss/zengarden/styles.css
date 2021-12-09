@@ -109,6 +109,7 @@ header {
   grid-column: 1/4;
   grid-row: 1/2;
   background-image: url("hawaiian-gardenia2.jpg");
+  background-repeat: no-repeat;
   background-color: #cccccc;
   color: white;
 }
