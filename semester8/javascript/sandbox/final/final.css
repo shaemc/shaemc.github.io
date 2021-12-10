@@ -1,7 +1,6 @@
 body{
     background-color: lightblue;
 }
-
 .calendar section {
     background-color: white;
     width: 200px;
@@ -15,4 +14,13 @@ body{
 }
 .calendar h2, .calendar p {
     padding: 10px;
+}
+.grocerylist {
+    background-color: white;
+    width: 50%;
+    border: solid black 5px;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin:0 auto;
+    margin-top: 20px;
 }

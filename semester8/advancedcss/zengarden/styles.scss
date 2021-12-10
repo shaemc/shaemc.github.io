@@ -1,22 +1,19 @@
-// styles.scss
-@use 'atoms' as *;  // assumes file is named _atoms.scss
-@use 'molecules' as *;
-@use 'organisms' as *; 
+// styles.scss 
 @use 'variables' as *;
-
-// add media queries for mobile view and ipad view
 
 @mixin background {
     max-width: 1200px;
 }
+
+/*Header*/
 
 header, .summary{
     background-color: $header-color;
     color: black;
 }
 
-header[role=banner]{
-    padding: 20px;
+header h2{
+    padding: 20px 0px 32px 38px;
 }
 
 body {
@@ -25,6 +22,9 @@ body {
     @include background();
     margin: 0 auto;
 }
+
+/*Footer*/
+
 footer {
     background-color: $main-color;
     color: white;
@@ -37,18 +37,19 @@ footer a:link {
     color: white;
     text-transform: uppercase;
 }
-h2, h3, h4, h5, h6 {
-    //font: $font-family;
-    font-family: 'Poppins', sans-serif;
-    font-size:25px;
-    margin: 0px;
-    padding: 20px 0px 20px 0px;
-}
+/*H1-H6*/
 h1{
-    font-size:50px; 
+    font-size: 38px;
     font-family: 'Poppins', sans-serif;
     margin: 0;
+    padding: 35px 35px 0px 35px;
     margin-bottom: -20px;
+}
+h2, h3, h4, h5, h6 {
+    font-size: 23px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 35px 35px 0px 35px;
 }
 h1, h2, h3 {
     text-transform: uppercase;
@@ -56,52 +57,48 @@ h1, h2, h3 {
 }
 p {
     font-family: 'Bitter', serif;
+    padding: 5px 35px 0px 35px;
 }
 
-// .summary {
-//     background-color: $fifth-color;
-// }
 .preamble {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    padding-right: 10px;
+    padding: 15px 0px 45px 10px;
     background-color: $fourth-color;
     color: black;
-    padding-bottom: 15px;
 }
 .explanation {
     background-color: $third-color;
-    padding-bottom: 15px;
+    background: url(flower.png) 600px -60px no-repeat;
+    background-color: #EAF4F4;
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    padding: 15px 0px 45px 10px;
 }
 .benefits {
     background-color: $fifth-color;
+    grid-column: 1/2;
+    grid-row: 2/4;
+    margin: 0px;
     padding-bottom: 15px;
 }
 .participation {
     background-color: $fourth-color;
     color: black;
-    padding-bottom: 15px;
+    grid-column: 2/5;
+    grid-row: 2/4;
+    padding: 15px 0px 45px 10px;
 }
 .requirements {
-    padding-bottom: 15px;
+    // grid-column: 2/5;
+    // grid-row: 2/4;
+    grid-column: 1/4;
+    grid-row: 3/4;
+    padding: 20px;    
+    padding: 15px 0px 45px 10px;
     background-color: $third-color;
-}
-
-.colors .background-color {
-    background-color: $background-color;
-}
-.main-color {
-    background-color: $main-color;
-}
-
-.third-color {
-    background-color: $third-color;
-}
-
-.fourth-color {
-    background-color: $fourth-color;
-}
-
-.fifth-color{
-    background-color: $fifth-color;
-}    
+}  
 
 p {
     margin: 0;
@@ -116,6 +113,7 @@ header {
     grid-column: 1/4;
     grid-row: 1/2;
     background-image: url("hawaiian-gardenia2.jpg");
+    background-size: cover;
     background-color: #cccccc;
     color: white;
 }
@@ -123,23 +121,17 @@ header {
 .summary {
     grid-column: 1/4;
     grid-row: 2/4;
-    padding: 20px;
+    padding: 25px 0px 35px 10px;
 }
-.preamble {
-    grid-column: 1/3;
-    grid-row: 3/4;
-    padding-right: 10px;
-}
+
 
 aside {
     grid-column: 3/4;
     background-color: $fourth-color;
 }
-.explanation {
-    background: url(flower.png) 600px -60px no-repeat;
-    background-color: #EAF4F4;
-    background-position: 0px 0px;
-    background-repeat: repeat-x;
+aside {
+    grid-column: 2/3;
+    grid-row: 1/2;
 }
 
 /*Animation for the flower*/
@@ -152,32 +144,8 @@ aside {
     }
   }
 
-.participation {
-    grid-column: 2/5;
-    grid-row: 2/4;
-    padding: 10px;
-}
-.benefits {
-    grid-column: 1/2;
-    grid-row: 2/4;
-    padding: 10px;
-    margin: 0px;
-    padding-left: 20px;
-
-}
-.requirements {
-    grid-column: 1/4;
-    grid-row: 3/4;
-    padding: 20px;
-
-}
-aside {
-    grid-column: 2/3;
-    grid-row: 1/2;
-}
-
-p[role=contentinfo] {
-    background-image: url("hawaiian-gardenia.jpg");
+  p[role='contentinfo'] {
+    background-image: url('hawaiian-gardenia.jpg');
     background-color: #cccccc;
     color: white;
     width: 100%;
@@ -186,9 +154,9 @@ p[role=contentinfo] {
     font-size: 1em;
     max-width: 111ch;
     & a {
-        color: white;
+      color: white;
     }
-}
+  }
 footer {
     grid-column: 1/5;
     grid-row: 5/6;
@@ -205,8 +173,11 @@ div {
 a {
     color: black;
 }
-a:hover {
-    color: #0b3a22;
+a:hover, p[role=contentinfo] a:hover {
+    color: $fifth-color;
+}
+footer a:hover {
+    color: $fourth-color;
 }
 
 .sidebar ul li {
@@ -218,7 +189,16 @@ a:hover {
     padding-bottom: 20px;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 850px) {
+    h2, h3, h4, h5, h6 {
+        font-size:25px;
+    }
+    h1{
+        font-size: 55px;
+    }
+    .benefits{
+        padding: 15px;
+    }
     .page-wrapper{
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -230,7 +210,7 @@ a:hover {
     
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 130px 130px 460px;
+        grid-template-rows: 200px 130px 490px;
         background-image: url("flower.png");
     }
     .main {
@@ -238,31 +218,33 @@ a:hover {
         grid-row: 2/3;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 390px 490px 695px 60px;
+        grid-template-rows: 390px 490px 710px 60px;
     }
     .participation {
         margin: 0px 0px -5px 20px;
+        padding: 15px 0px 45px 10px;
     }
     .explanation {
-        padding-left: 20px;
         grid-column: 1/5;
         grid-row: 1/4;
         animation: animatedBackground 30s linear infinite alternate;
+        padding: 15px 0px 45px 10px;
     }
     .preamble {
-    margin: 20px 0px 20px 20px;
+        margin: 20px 0px 20px 20px;
+        padding: 15px 0px 45px 10px;
     }
-    p[role=contentinfo] {
-        background-image: url("hawaiian-gardenia.jpg");
+    p[role='contentinfo'] {
+        background-image: url('hawaiian-gardenia.jpg');
         background-color: #cccccc;
         color: white;
         width: 100%;
-        margin: 30px 0px 0px -20px;
-        padding: 20px 169px;
+        margin: 20px 0px -20px -20px;
+        padding: 10px 19px 10px 20px;
         font-size: 1em;
         max-width: 111ch;
         & a {
-            color: white;
+          color: white;
         }
-    }
+      }
 }

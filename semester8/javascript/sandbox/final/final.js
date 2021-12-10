@@ -37,12 +37,13 @@ const json = {
         },
         {
             food: "Brownies",
-            ingredients: "pepperoni, sauce, crust, cheese"
+            ingredients: "brownie mix"
         },
     ]   
 }
 let usedmeals = [];
 let ingredients = [];
+let uniquegroceries = [];
 
 const button = document.querySelector(".button").addEventListener("click", fillCalendar);
 
@@ -55,8 +56,9 @@ function mealFilter(){
     numberofmeals = Math.floor(Math.random() * json.meals.length);
    } while(checkDuplicate(numberofmeals, usedmeals))
     meal = json.meals[numberofmeals];
-    ing = meal.ingredients.split(',');
-    ingredients.push(ing);
+    neededingredients = meal.ingredients.split(',');
+    ingredients += neededingredients + ', ';
+    console.log(ingredients)
     usedmeals.push(numberofmeals);
     return meal;
 }
@@ -78,6 +80,8 @@ function checkDuplicate(index, usedmeals){
 // mealFilter();
 function fillCalendar(calendar) {
     usedmeals = [];
+    ingredients = [];
+
     const sunday = document.querySelector(".sunday");
     const monday = document.querySelector(".monday");
     const tuesday = document.querySelector(".tuesday");
@@ -95,8 +99,28 @@ function fillCalendar(calendar) {
     saturday.innerHTML = `<h2>Saturday</h2> <p>${mealFilter().food}</p>`;
 
     const groceries = document.querySelector(".grocerylist");
+    
+    newList = ingredients.toString()
+    // let newList = new Array(ingredients);
+    // newList.forEach(ingredient => (newList));
+    
+    // console.log(ingredient);
 
-    groceries.innerHTML = `<h3> Grocery List </h3> <p>${ingredients}</p>`; //filter through this ingredients to remove duplicates
+    // console.log(newList);
+    // let uniquegroceries = newList.filter((c, index) => {
+    //     return newList.indexOf(c) !== index;
+    // });
+
+    // console.log(newList);
+    // newList.forEach((ingredient) => {
+    //     if (!uniquegroceries.includes(ingredient)) {
+    //         uniquegroceries.push(ingredient);
+    //     }
+    // });
+    // console.log(uniquegroceries);
+
+
+    groceries.innerHTML = `<h3> Grocery List </h3> <p>${newList}</p>`; //filter through this ingredients to remove duplicates
     // console.log(groceries.innerHTML);
 
     return calendar;
