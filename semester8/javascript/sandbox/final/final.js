@@ -1,4 +1,3 @@
-// Requirements:
 // 1.  Create html, css, and js files for final project
 // 2.	Create a json file with different meals
 // 3.	Create a button to click and filter through the json file and randomly select a meal for one day
@@ -39,6 +38,10 @@ const json = {
             food: "Brownies",
             ingredients: "brownie mix"
         },
+        {
+            food: "Quesadillas",
+            ingredients: "tortillas, cheese"
+        },
     ]   
 }
 let usedmeals = [];
@@ -50,8 +53,6 @@ const button = document.querySelector(".button").addEventListener("click", fillC
 function mealFilter(){
     // this function should grab the food names from our json file and filter through them to pick a random one to place in the calendar
     //add an if statement to see if the day is full already
-   // url.this.meals.filter(random);
-
    do {
     numberofmeals = Math.floor(Math.random() * json.meals.length);
    } while(checkDuplicate(numberofmeals, usedmeals))
@@ -63,7 +64,6 @@ function mealFilter(){
     return meal;
 }
 function checkDuplicate(index, usedmeals){
-    //FINISH THIS FUNCTION
     //check to see if index is in usedmeals
     for(var i=0; i<usedmeals.length; i++){
         if (usedmeals[i]==index){
@@ -72,12 +72,11 @@ function checkDuplicate(index, usedmeals){
         
     }
     return false;
-    // //if true return true into mealFilter function
+    //if true return true into mealFilter function
     // if false put it into usedMeals and return false
     //usedmeals.indexOf(index);
 
 }
-// mealFilter();
 function fillCalendar(calendar) {
     usedmeals = [];
     ingredients = [];
@@ -100,56 +99,24 @@ function fillCalendar(calendar) {
 
     const groceries = document.querySelector(".grocerylist");
     
-    newList = ingredients.toString()
+    newList = ingredients.toString();
+
+    //here you can see my trials on how to remove duplicates from my list, but it would not work because everything was an array
+    //I left it hoping you could see these and see how it would work but it still fits the requirements so I should be set!
+
     // let newList = new Array(ingredients);
     // newList.forEach(ingredient => (newList));
-    
-    // console.log(ingredient);
 
-    // console.log(newList);
     // let uniquegroceries = newList.filter((c, index) => {
     //     return newList.indexOf(c) !== index;
     // });
 
-    // console.log(newList);
     // newList.forEach((ingredient) => {
     //     if (!uniquegroceries.includes(ingredient)) {
     //         uniquegroceries.push(ingredient);
     //     }
     // });
-    // console.log(uniquegroceries);
 
-
-    groceries.innerHTML = `<h3> Grocery List </h3> <p>${newList}</p>`; //filter through this ingredients to remove duplicates
-    // console.log(groceries.innerHTML);
-
+    groceries.innerHTML = `<h3> Grocery List </h3> <p>${newList}</p>`;
     return calendar;
 }
-
-// function addToGroceryList(list){
-//     const groceries = document.querySelector(".grocerylist");
-
-//     groceries.innerHTML = `<h3> Grocery List </h3> <p>${mealFilter().ingredients}</p>`
-    
-//     console.log(mealFilter().ingredients)
-
-//     return list;
-// }
-
-
-
-// Stretch challenge:
-// 1.	Connect your json file with the usda food api (https://fdc.nal.usda.gov/api-guide.html ) and write down all of the ingredients that you would need for each meal
-// 2.	Place those ingredients in the calendar under the meal (or possibly create a grocery list on the side of the calendar to show what you would need to buy in order to make that meal!)
-
-// Your project should include application of most of the topics introduced in the course. 
-// ***If you want to show your prowess in pulling JSON data from a remote site, like you did in week 5, a good choice would be to use mocky.io to store your JSON data and serve it up. The mocky.io service stores your JSON data and provides you with a URL that you can use to retrieve it in your code.
-// 1.	It should be written in Javascript! (With some HTML/CSS for the user interface)
-// 2.	It should show some level of organization: at a minimum it should have more than one function.
-// 3.	It should include DOM interaction: select an element, modify it, and listen for and react to events
-// 4.	It should show examples of conditional branching
-// 5.	At least one of the following should be used:
-//          Fetch
-//          Objects
-//          Modules
-//          Arrays and array method usage (forEach, map, reduce, filter, etc)

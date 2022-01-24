@@ -1,5 +1,5 @@
 window.addEventListener('load',()=>{
-    const requestURL = '/finalproject/temples.json'
+    const requestURL = '/temples.json'
     fetch(requestURL)
         .then((response)=> {
             return response.json();
