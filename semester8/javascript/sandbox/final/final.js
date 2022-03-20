@@ -75,7 +75,6 @@ function checkDuplicate(index, usedmeals){
     //if true return true into mealFilter function
     // if false put it into usedMeals and return false
     //usedmeals.indexOf(index);
-
 }
 function fillCalendar(calendar) {
     usedmeals = [];
